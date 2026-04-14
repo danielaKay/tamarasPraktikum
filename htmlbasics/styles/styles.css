@@ -1,0 +1,7 @@
+.item-data {}
+
+.item-data th {
+    width: 25%;
+    text-align: left;
+    background-color: lightgray;
+}
