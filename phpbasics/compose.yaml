@@ -1,0 +1,31 @@
+services:
+  database:
+    image: mysql:9.6
+    environment:
+      MYSQL_ROOT_PASSWORD: $MYSQL_ROOT_PASSWORD
+      MYSQL_DATABASE: $MYSQL_DATABASE
+      MYSQL_USER: $MYSQL_USER
+      MYSQL_PASSWORD: $MYSQL_PASSWORD
+
+  php:
+    build:
+      dockerfile: docker/php/Dockerfile
+      context: .
+      target: dev
+    volumes:
+      - .:/var/www/html
+
+  phpmyadmin:
+    image: phpmyadmin:apache
+    environment:
+      MYSQL_USER: $MYSQL_USER
+      PMA_HOST: database
+    ports:
+      - '127.0.0.1:8080:80'
+
+  nginx:
+    image: nginx:latest
+    ports:
+      - '127.0.0.1:8000:80'
+    volumes:
+      - ./docker/webserver:/etc/nginx/conf.d
