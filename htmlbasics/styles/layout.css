@@ -1,11 +1,11 @@
-.pageContainer {
-    border: thin green solid;
+.page-container {
+    xborder: thin green solid;
     margin: 0px auto;
     max-width: 750px;
 }
 
-.mainContent {
-    border: thin blue solid;
+.main-content {
+    xborder: thin blue solid;
     padding: 50px;
     display: flex;
     flex-direction: column;
@@ -13,7 +13,7 @@
 }
 
 .navigation {
-    border: thin purple solid;
+    xborder: thin purple solid;
     padding: 10px 50px 10px 50px;
 }
 

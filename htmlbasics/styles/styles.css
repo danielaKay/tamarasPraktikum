@@ -1,3 +1,12 @@
+/* for overview page */
+.item-summary-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+/* for item page */
 .item-data {}
 
 .item-data th {
@@ -5,3 +14,4 @@
     text-align: left;
     background-color: lightgray;
 }
+
