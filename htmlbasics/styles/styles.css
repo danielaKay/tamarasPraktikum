@@ -5,6 +5,14 @@
     gap: 20px;
 }
 
+.item-summary-list .key {
+    padding-right: 10px;
+}
+
+.item-summary-list .value {
+    font-weight: bold;
+}
+
 
 /* for item page */
 .item-data {}
