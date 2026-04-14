@@ -1,2 +1,2 @@
 # tamarasPraktikum
-Code von Tamaras Praktikum
+Code von Tamaras großartigem Praktikum
