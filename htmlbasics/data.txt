@@ -1,3 +1,3 @@
-Titel= Tiny dungeon:Zweite edition Autor= Alan Bahr Bewertung= ein schönes einsteigerfreundliches Regelwerk
-Titel= Investigators handbook Autor= Sandy Petersen Bewertung= ein gutes Buch wenn man Coc spielen möchte
-Titel= Jäger die Vergeltung Autor= Justin Achilli   Bewertung= eine interesannte perspektive in WOD
+Titel= Tiny dungeon:Zweite edition Autor= Alan Bahr Bewertung= ein schönes einsteigerfreundliches Regelwerk Erscheinungsdatum= 2021
+Titel= Investigators handbook Autor= Sandy Petersen Bewertung= ein gutes Buch wenn man Coc spielen möchte   Erscheinungsdatum= 2016
+Titel= Jäger die Vergeltung Autor= Justin Achilli   Bewertung= eine interesannte perspektive in WOD         Erscheinungsdatum= 2000
