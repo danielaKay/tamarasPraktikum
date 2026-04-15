@@ -1,36 +1,82 @@
+<?php
+
+$servername = "database";
+$username = "tamara";
+$password = "daniela";
+$dbname = "tamara";
+
+try {
+  $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+  // set the PDO error mode to exception
+  $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+//   echo "Connected successfully";
+} catch(PDOException $e) {
+  echo "Connection failed: " . $e->getMessage();
+}
+
+// $sql = "INSERT INTO book (title, author, publishing_year, comment, user_id)
+//     VALUES 
+//     ('Tiny dungeon: Zweite edition', 'Alan Bahr', 2021, 'ein schönes einsteigerfreundliches Regelwerk', 1),
+//     ('Investigators handbook', 'Sandy Petersen', 2016, 'ein gutes Buch wenn man Coc spielen möchte', 1),
+//     ('Jäger die Vergeltung', 'Justin Achilli', 2000, 'eine interesannte perspektive in WOD', 1)";
+
+// if ($conn->query($sql) === TRUE) {
+//   echo "New record created successfully";
+// } else {
+//   echo "Error: " . $sql . "<br>";
+// }
+
+$book = array();
+
+try {
+  $sql = "SELECT * FROM book WHERE id = 3";
+  $result = $conn->query($sql);
+  if ($result->rowCount() > 0) {
+    while($row = $result->fetch()) {
+        
+        $book = $row;
+    }
+    unset($result);
+  } else {
+    echo "No records found.";
+  }
+} catch(PDOException $e) {
+  echo "Error: " . $sql . "<br>";
+}
+?>
 <html>
     <head>
-        <title>Bv Jäger die Vergeltung</title>
-        <link rel="stylesheet" href="styles/reset.css">
-        <link rel="stylesheet" href="styles/styles.css">
-        <link rel="stylesheet" href="styles/fonts.css">
-        <link rel="stylesheet" href="styles/layout.css">
+        <title>BV: <?= $book["title"] ?></title>
+        <link rel="stylesheet" href="/media/styles/reset.css">
+        <link rel="stylesheet" href="/media/styles/styles.css">
+        <link rel="stylesheet" href="/media/styles/fonts.css">
+        <link rel="stylesheet" href="/media/styles/layout.css">
     </head>
     <body>
         <div class="page-container">
             <div class="navigation">
-                <a href="index.html">Home</a>
+                <a href="index.php">Home</a>
             </div>
             <div class="main-content">
-                <h1>Jäger die Vergeltung von Justin Achilli</h1>
+                <h1><?= $book["title"] ?> von <?= $book["author"] ?></h1>
 
                 <table class="item-data">
                     <tbody>
                         <tr>
                             <th>Title:</th>
-                            <td>Jäger die Vergeltung</td>
+                            <td><?= $book["title"] ?></td>
                         </tr>
                         <tr>
                             <th>Autor:</th>
-                            <td>Justin Achilli</td>
+                            <td><?= $book["author"] ?></td>
+                        </tr>
+                        <tr>
+                            <th>Erscheinungsdatum:</th>
+                            <td><?= $book["publishing_year"] ?></td>
                         </tr>
                         <tr>
                             <th>Bewertung</th>
-                            <td>eine interesannte perspektive in WOD</td>
-                        </tr>
-                         <tr>
-                            <th>Erscheinungsdatum</th>
-                            <td>2000</td>
+                            <td><?= $book["comment"] ?></td>
                         </tr>
                     </tbody>
                 </table>

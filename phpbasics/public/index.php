@@ -1,25 +1,49 @@
 <?php
 
-$books = [
-    [
-        "title" => "Tiny dungeon: Zweite edition",
-        "author" =>"Alan Bahr",
-        "publishing_year" => 2021,
-        "comment" => "ein schönes einsteigerfreundliches Regelwerk",
-    ],
-    [
-        "title" => "Investigators handbook",
-        "author" =>"Sandy Petersen",
-        "publishing_year" => 2016,
-        "comment" => "ein gutes Buch wenn man Coc spielen möchte",
-    ],
-    [
-        "title" => "Jäger die Vergeltung",
-        "author" =>"Justin Achilli",
-        "publishing_year" => 2000,
-        "comment" => "eine interesannte perspektive in WOD",
-    ],
-];
+$servername = "database";
+$username = "tamara";
+$password = "daniela";
+$dbname = "tamara";
+
+try {
+  $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+  // set the PDO error mode to exception
+  $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+//   echo "Connected successfully";
+} catch(PDOException $e) {
+  echo "Connection failed: " . $e->getMessage();
+}
+
+// $sql = "INSERT INTO book (title, author, publishing_year, comment, user_id)
+//     VALUES 
+//     ('Tiny dungeon: Zweite edition', 'Alan Bahr', 2021, 'ein schönes einsteigerfreundliches Regelwerk', 1),
+//     ('Investigators handbook', 'Sandy Petersen', 2016, 'ein gutes Buch wenn man Coc spielen möchte', 1),
+//     ('Jäger die Vergeltung', 'Justin Achilli', 2000, 'eine interesannte perspektive in WOD', 1)";
+
+// if ($conn->query($sql) === TRUE) {
+//   echo "New record created successfully";
+// } else {
+//   echo "Error: " . $sql . "<br>";
+// }
+
+$books = array();
+
+try {
+  $sql = "SELECT * FROM book";
+  $result = $conn->query($sql);
+  if ($result->rowCount() > 0) {
+    while($row = $result->fetch()) {
+        
+        $books[] = $row;
+    }
+    unset($result);
+  } else {
+    echo "No records found.";
+  }
+} catch(PDOException $e) {
+  echo "Error: " . $sql . "<br>";
+}
+
 ?>
 
 <html>
@@ -37,11 +61,7 @@ $books = [
             </div>
             <div class="main-content">
                 <h1>Bücher-Verwaltung: Übersicht</h1>
-                <blockquote>
-                    <?php
-                        echo 'Hello World!';
-                    ?>
-                </blockquote>
+
                 <div class="item-summary-list">
                     <?php foreach ($books as $key => $book) : ?>
                         <div class="item-summary">
