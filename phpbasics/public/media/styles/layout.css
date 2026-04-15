@@ -1,0 +1,22 @@
+.page-container {
+    xborder: thin green solid;
+    margin: 0px auto;
+    max-width: 750px;
+}
+
+.main-content {
+    xborder: thin blue solid;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.navigation {
+    xborder: thin purple solid;
+    padding: 10px 50px 10px 50px;
+}
+
+th, td {
+    padding: 5px;
+}
