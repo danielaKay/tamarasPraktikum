@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: database
--- Generation Time: Apr 16, 2026 at 08:25 AM
+-- Generation Time: Apr 16, 2026 at 09:41 AM
 -- Server version: 9.6.0
 -- PHP Version: 8.3.30
 
@@ -33,17 +33,18 @@ CREATE TABLE `book` (
   `author` varchar(256) NOT NULL,
   `publishing_year` int NOT NULL,
   `comment` varchar(256) NOT NULL,
-  `user_id` int NOT NULL
+  `user_id` int NOT NULL,
+  `cover_image` varchar(256) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `book`
 --
 
-INSERT INTO `book` (`id`, `title`, `author`, `publishing_year`, `comment`, `user_id`) VALUES
-(1, 'Tiny dungeon: Zweite edition', 'Alan Bahr', 2021, 'ein schönes einsteigerfreundliches Regelwerk', 1),
-(2, 'Investigators handbook', 'Sandy Petersen', 2016, 'ein gutes Buch wenn man Coc spielen möchte', 1),
-(3, 'Jäger die Vergeltung', 'Justin Achilli', 2000, 'eine interesannte perspektive in WOD', 1);
+INSERT INTO `book` (`id`, `title`, `author`, `publishing_year`, `comment`, `user_id`, `cover_image`) VALUES
+(1, 'Tiny dungeon: Zweite edition', 'Alan Bahr', 2021, 'ein schönes einsteigerfreundliches Regelwerk', 1, 'TinyDungeon2E_cover-900px.jpg'),
+(2, 'Investigators handbook', 'Sandy Petersen', 2016, 'ein gutes Buch wenn man Coc spielen möchte', 1, '26219453.jpg'),
+(3, 'Jäger die Vergeltung', 'Justin Achilli', 2000, 'eine interesannte perspektive in WOD', 1, 'Jaeger-Vergeltung-Cover.jpg');
 
 -- --------------------------------------------------------
 
