@@ -1,51 +1,64 @@
 <html>
     <head>
-        <title>Praktikum</title>
-        <style>
-            h1 {
-                color:pink;
-            }
-            .latein {
-                color:CadetBlue;
-            }
-             mark {
-                background-color:Brown;
-             }
-             blockqoute mark {
-                background-color:DarkGrey;
-             }
-             .pageContainer {
-                xborder: thin green solid;
-                margin: 0px auto;
-                max-width: 750px;
-             }
-             .mainContent {
-                xborder: thin blue solid;
-                margin: 50px;
-             }
-
-             .navigation {
-                xborder: thin red solid;
-                margin: 10px 50px 0px 50px;
-             }
-        </style>
+        <title>Bücher-Verwaltung: Übersicht</title>
+        <link rel="stylesheet" href="styles/reset.css">
+        <link rel="stylesheet" href="styles/styles.css">
+        <link rel="stylesheet" href="styles/fonts.css">
+        <link rel="stylesheet" href="styles/layout.css">
     </head>
     <body>
-        <div class="pageContainer">
-            <div class="navigationContainer">
+        <div class="page-container">
+            <div class="navigation">
                 <a href="">Home</a>
             </div>
-            <div class="mainContent">
-                <h1>hallo welt</h1>
-                <p>
-                    <mark>Lorem ipsum</mark> dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. 
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                </p>
-                <img src="https://www.placekittens.com/g/200/300" />
-                <h1 class="latein">Latein</h1>
-                <blockqoute>
-                    <mark>Lorem ipsum</mark> dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-                </blockqoute>
+            <div class="main-content">
+                <h1>Bücher-Verwaltung: Übersicht</h1>
+
+                <div class="item-summary-list">
+                    <div class="item-summary">
+                        <div class="data">
+                            <span class="key">Title:</span>
+                            <span class="value"><a href="item_01.html">Tiny dungeon: Zweite edition</a></span>
+                        </div>
+                        <div class="data">
+                            <span class="key">Author:</span>
+                            <span class="value">Alan Bahr</span>
+                        </div>
+                        <div class="data">
+                            <span class="key">Review:</span>
+                            <span class="value">ein schönes einsteigerfreundliches Regelwerk</span>
+                        </div>
+                    </div>
+                    <div class="item-summary">
+                        <div class="data">
+                            <span class="key">Title:</span>
+                            <span class="value"><a href="item_02.html">Investigators handbook</a></span>
+                        </div>
+                        <div class="data">
+                            <span class="key">Author:</span>
+                            <span class="value">Sandy Petersen</span>
+                        </div>
+                        <div class="data">
+                            <span class="key">Review:</span>
+                            <span class="value">ein gutes Buch wenn man Coc spielen möchte</span>
+                        </div>
+                    </div>
+                    <div class="item-summary">
+                        <div class="data">
+                            <span class="key">Title:</span>
+                            <span class="value"><a href="item_03.html">Jäger die Vergeltung</a></span>
+                        </div>
+                        <div class="data">
+                            <span class="key">Author:</span>
+                            <span class="value">Justin Achilli</span>
+                        </div>
+                        <div class="data">
+                            <span class="key">Review:</span>
+                            <span class="value">eine interesannte perspektive in WOD</span>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
 
