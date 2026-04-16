@@ -15,12 +15,24 @@
 
 
 /* for item page */
-.item-data {}
+.item-data th,
+.item-data td {
+    padding: 15px;
+}
 
 .item-data th {
     width: 25%;
     text-align: left;
     background-color: lightgray;
+}
+.item-data td {
+    background-color: #eeeeee;
+}
+
+.book-data-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
 }
 
 .cover-image {
