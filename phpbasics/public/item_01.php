@@ -71,11 +71,23 @@ try {
                                 <th>Bewertung</th>
                                 <td><?= $book["comment"] ?></td>
                             </tr>
+                            <tr>
+                                <th>genre</th>
+                                <td><?= $book["genre"] ?></td>
+                            </tr>
                         </tbody>
                     </table>
 
                 </div>
-                
+                <!-- <div>
+                    <label for="genre">Choose a genre:</label>
+                    <select name="genre" id="genre">
+                        <option value="horror">horror</option>
+                        <option value="fantasy">fantasy</option>
+                        <option value="romance">romance</option>
+                        <option value="paranormal">paranormal</option>
+                    </select>
+                </div> -->
             </div>
         </div>
 
