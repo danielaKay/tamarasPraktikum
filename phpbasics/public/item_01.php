@@ -56,19 +56,19 @@ try {
                     <table class="item-data">
                         <tbody>
                             <tr>
-                                <th>Title:</th>
+                                <th>title:</th>
                                 <td><?= $book["title"] ?></td>
                             </tr>
                             <tr>
-                                <th>Autor:</th>
+                                <th>author:</th>
                                 <td><?= $book["author"] ?></td>
                             </tr>
                             <tr>
-                                <th>Erscheinungsdatum:</th>
+                                <th>publishing year:</th>
                                 <td><?= $book["publishing_year"] ?></td>
                             </tr>
                             <tr>
-                                <th>Bewertung</th>
+                                <th>review</th>
                                 <td><?= $book["comment"] ?></td>
                             </tr>
                             <tr>

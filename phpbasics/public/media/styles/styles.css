@@ -6,15 +6,24 @@
 }
 
 .item-summary-list .key {
+    display: inline-block;
     padding-right: 10px;
+    min-width: 120px;
+    background-color:aliceblue;
 }
 
 .item-summary-list .value {
+    display: inline-block;
     font-weight: bold;
+    background-color:lightsteelblue;
+    min-width: 200px;
 }
 
 
 /* for item page */
+.item-data {
+    width: 100%;
+}
 .item-data th,
 .item-data td {
     padding: 15px;
@@ -33,13 +42,18 @@
     display: flex;
     flex-direction: row;
     gap: 20px;
+    width: 100%;
 }
 
 .cover-image {
-    max-width: 200px;
+    width: 200px;
 }
 .cover-image img {
     max-width: 100%;
 }
 
+/* add bookpage */
+.form-row {
+    margin-bottom: 20px;
+}
 
