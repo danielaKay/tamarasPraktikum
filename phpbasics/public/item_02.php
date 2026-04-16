@@ -80,6 +80,7 @@ try {
                         </tr>
                     </tbody>
                 </table>
+                <img src="/media/images/26219453.jpg" />
             </div>
         </div>
 

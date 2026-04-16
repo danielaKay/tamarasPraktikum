@@ -14,18 +14,6 @@ try {
   echo "Connection failed: " . $e->getMessage();
 }
 
-// $sql = "INSERT INTO book (title, author, publishing_year, comment, user_id)
-//     VALUES 
-//     ('Tiny dungeon: Zweite edition', 'Alan Bahr', 2021, 'ein schönes einsteigerfreundliches Regelwerk', 1),
-//     ('Investigators handbook', 'Sandy Petersen', 2016, 'ein gutes Buch wenn man Coc spielen möchte', 1),
-//     ('Jäger die Vergeltung', 'Justin Achilli', 2000, 'eine interesannte perspektive in WOD', 1)";
-
-// if ($conn->query($sql) === TRUE) {
-//   echo "New record created successfully";
-// } else {
-//   echo "Error: " . $sql . "<br>";
-// }
-
 $book = array();
 
 try {
@@ -63,6 +51,11 @@ try {
                 <table class="item-data">
                     <tbody>
                         <tr>
+                            <td rowspan="4">
+                                <div class="cover-image"> 
+                                    <img src="/media/images/TinyDungeon2E_cover-900px.jpg" />
+                                </div>
+                            </td>
                             <th>Title:</th>
                             <td><?= $book["title"] ?></td>
                         </tr>
@@ -80,6 +73,7 @@ try {
                         </tr>
                     </tbody>
                 </table>
+                
             </div>
         </div>
 

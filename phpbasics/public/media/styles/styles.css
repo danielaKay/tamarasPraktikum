@@ -23,3 +23,11 @@
     background-color: lightgray;
 }
 
+.cover-image {
+    max-width: 200px;
+}
+.cover-image img {
+    max-width: 100%;
+}
+
+
