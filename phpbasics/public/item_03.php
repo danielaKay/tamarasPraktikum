@@ -83,6 +83,10 @@ try {
                                 <th>Bewertung</th>
                                 <td><?= $book["comment"] ?></td>
                             </tr>
+                            <tr>
+                                <th>genre</th>
+                                <td><?= $book["genre"] ?></td>
+                            </tr>
                         </tbody>
                     </table>
 
