@@ -62,7 +62,7 @@ try {
 
                <div class="book-data-container">
                     <div class="cover-image"> 
-                        <img src="/media/images/26219453.jpg" />
+                        <img src="/media/images/<?= $book["cover_image"] ?>" />
                     </div>
                 
                     <table class="item-data">

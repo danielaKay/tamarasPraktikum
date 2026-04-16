@@ -50,7 +50,7 @@ try {
 
                 <div class="book-data-container">
                     <div class="cover-image"> 
-                        <img src="/media/images/TinyDungeon2E_cover-900px.jpg" />
+                        <img src="/media/images/<?= $book["cover_image"] ?>" />
                     </div>
                 
                     <table class="item-data">

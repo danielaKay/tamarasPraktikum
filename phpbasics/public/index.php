@@ -64,6 +64,7 @@ try {
 
                 <div class="item-summary-list">
                     <?php foreach ($books as $key => $book) : ?>
+                        
                         <div class="item-summary">
                             <div class="data">
                                 <span class="key">Title:</span>
@@ -89,6 +90,12 @@ try {
                                 <span class="key">Erscheinungsdatum:</span>
                                 <span class="value">
                                     <?= $book["publishing_year"] ?>
+                                </span>
+                            </div>
+                            <div class="data">
+                                <span class="key">Cover:</span>
+                                <span class="value">
+                                    <?= $book["cover_image"] ?>
                                 </span>
                             </div>
                         </div>
