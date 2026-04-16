@@ -64,39 +64,43 @@ try {
 
                 <div class="item-summary-list">
                     <?php foreach ($books as $key => $book) : ?>
-                        
-                        <div class="item-summary">
-                            <div class="data">
-                                <span class="key">Title:</span>
-                                <span class="value">
-                                    <a href="item_0<?= $key+1 ?>.php">
-                                        <?= $book["title"] ?>
-                                    </a>
-                                </span>
+                        <div class="book-data-container">
+                            <div class="cover-image"> 
+                                <img src="/media/images/<?= $book["cover_image"] ?>" />
                             </div>
-                            <div class="data">
-                                <span class="key">Author:</span>
-                                <span class="value">
-                                    <?= $book["author"] ?>
-                                </span>
-                            </div>
-                            <div class="data">
-                                <span class="key">Review:</span>
-                                <span class="value">
-                                    <?= $book["comment"] ?>
-                                </span>
-                            </div>
-                            <div class="data">
-                                <span class="key">Erscheinungsdatum:</span>
-                                <span class="value">
-                                    <?= $book["publishing_year"] ?>
-                                </span>
-                            </div>
-                            <div class="data">
-                                <span class="key">Cover:</span>
-                                <span class="value">
-                                    <?= $book["cover_image"] ?>
-                                </span>
+                            <div class="item-summary">
+                                <div class="data">
+                                    <span class="key">Title:</span>
+                                    <span class="value">
+                                        <a href="item_0<?= $key+1 ?>.php">
+                                            <?= $book["title"] ?>
+                                        </a>
+                                    </span>
+                                </div>
+                                <div class="data">
+                                    <span class="key">Author:</span>
+                                    <span class="value">
+                                        <?= $book["author"] ?>
+                                    </span>
+                                </div>
+                                <div class="data">
+                                    <span class="key">Review:</span>
+                                    <span class="value">
+                                        <?= $book["comment"] ?>
+                                    </span>
+                                </div>
+                                <div class="data">
+                                    <span class="key">Erscheinungsdatum:</span>
+                                    <span class="value">
+                                        <?= $book["publishing_year"] ?>
+                                    </span>
+                                </div>
+                                <div class="data">
+                                    <span class="key">Cover:</span>
+                                    <span class="value">
+                                        <?= $book["cover_image"] ?>
+                                    </span>
+                                </div>
                             </div>
                         </div>
                     <?php endforeach ?>    
