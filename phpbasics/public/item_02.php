@@ -60,27 +60,34 @@ try {
             <div class="main-content">
                 <h1><?= $book["title"] ?> von <?= $book["author"] ?></h1>
 
-                <table class="item-data">
-                    <tbody>
-                        <tr>
-                            <th>Title:</th>
-                            <td><?= $book["title"] ?></td>
-                        </tr>
-                        <tr>
-                            <th>Autor:</th>
-                            <td><?= $book["author"] ?></td>
-                        </tr>
-                        <tr>
-                            <th>Erscheinungsdatum:</th>
-                            <td><?= $book["publishing_year"] ?></td>
-                        </tr>
-                        <tr>
-                            <th>Bewertung</th>
-                            <td><?= $book["comment"] ?></td>
-                        </tr>
-                    </tbody>
-                </table>
-                <img src="/media/images/26219453.jpg" />
+               <div class="book-data-container">
+                    <div class="cover-image"> 
+                        <img src="/media/images/26219453.jpg" />
+                    </div>
+                
+                    <table class="item-data">
+                        <tbody>
+                            <tr>
+                                <th>Title:</th>
+                                <td><?= $book["title"] ?></td>
+                            </tr>
+                            <tr>
+                                <th>Autor:</th>
+                                <td><?= $book["author"] ?></td>
+                            </tr>
+                            <tr>
+                                <th>Erscheinungsdatum:</th>
+                                <td><?= $book["publishing_year"] ?></td>
+                            </tr>
+                            <tr>
+                                <th>Bewertung</th>
+                                <td><?= $book["comment"] ?></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+               
             </div>
         </div>
 
