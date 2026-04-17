@@ -1,9 +1,9 @@
 :root {
     --bg-color: #f1f1f1;
-    --card-bg-color: #2e8b57; 
+    --card-bg-color: darkslategray; 
     --main-text-color: #d3fadf;
-    --accent-text-color: #00c8ec;
-    --headline-text-color: #00c8ec;
+    --accent-text-color: darkseagreen;
+    --headline-text-color: mediumaquamarine;
 }
 
 body {
