@@ -53,28 +53,52 @@
 
                 <form action="/new.php" method="post">
                     <div class="form-row">
-                        <label for="title">title:</label> 
-                        <input type="text" id="title" name="title">
+                        <div class="key">
+                            <label for="title">title:</label> 
+                        </div>
+                        <div class="value">
+                            <input type="text" id="title" name="title">
+                        </div>
                     </div>
                     <div class="form-row">
-                        <label for="author">author:</label> 
-                        <input type="text" id="author" name="author">
+                        <div class="key">
+                            <label for="author">author:</label> 
+                        </div>
+                        <div class="value">
+                            <input type="text" id="author" name="author">
+                        </div>
                     </div>
                     <div class="form-row">
-                        <label for="comment">review:</label> 
-                        <input type="text" id="comment" name="comment">
+                        <div class="key">
+                            <label for="comment">review:</label> 
+                        </div>
+                        <div class="value">
+                            <input type="text" id="comment" name="comment">
+                        </div>
                     </div>
                     <div class="form-row">
-                        <label for="publishing_year">publishing year:</label> 
-                        <input type="text" id="publishing_year" name="publishing_year">
+                        <div class="key">
+                            <label for="publishing_year">publishing year:</label> 
+                        </div>
+                        <div class="value">
+                            <input type="text" id="publishing_year" name="publishing_year">
+                        </div>
                     </div>
                     <div class="form-row">
-                        <label for="cover_image">cover:</label> 
-                        <input type="text" id="cover_image" name="cover_image">
+                        <div class="key">
+                            <label for="cover_image">cover:</label> 
+                        </div>
+                        <div class="value">
+                            <input type="text" id="cover_image" name="cover_image">
+                        </div>
                     </div>
                     <div class="form-row">
-                        <label for="genre">genre:</label> 
-                        <input type="text" id="genre" name="genre">
+                        <div class="key">
+                            <label for="genre">genre:</label> 
+                        </div>
+                        <div class="value">
+                            <input type="text" id="genre" name="genre">
+                        </div>
                     </div>
                     <div class="form-row">
                         <input type="submit" value="Add">

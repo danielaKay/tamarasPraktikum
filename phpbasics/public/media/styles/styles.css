@@ -54,7 +54,24 @@
 
 /* add bookpage */
 .form-row {
+    display: flex;
+    flex-direction: row;
     margin-bottom: 20px;
+    height: 33px;
+} 
+.form-row .key {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    min-width: 125px;
+    padding-left: 5px;
+    background-color: cornflowerblue;
+}
+
+.form-row .value {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 /* navigation */
