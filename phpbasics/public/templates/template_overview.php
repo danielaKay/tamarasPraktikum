@@ -35,6 +35,7 @@
     <head>
         <title>Bücher-Verwaltung: Übersicht</title>
         <link rel="stylesheet" href="/media/styles/reset.css">
+        <script src="https://kit.fontawesome.com/09881e4f6e.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="/media/styles/styles.css">
         <link rel="stylesheet" href="/media/styles/fonts.css">
         <link rel="stylesheet" href="/media/styles/layout.css">
@@ -42,7 +43,8 @@
     <body>
         <div class="page-container">
             <div class="navigation">
-                <a href="/index.php">Home</a><a href="/new.php">Add Book</a>
+                <a href="/index.php"><i class="fa-sharp fa-solid fa-home"></i>Home</a>
+                <a href="/new.php">Add Book</a>
             </div>
             <div class="main-content">
                 <h1>Bücher-Verwaltung: Übersicht</h1>
