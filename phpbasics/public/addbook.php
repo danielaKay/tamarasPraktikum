@@ -47,66 +47,76 @@
     </head>
     <body>
         <div class="page-container">
-             <div class="navigation card-container">
-                <a href="/index.php"><i class="fa-sharp fa-solid fa-home"></i>Home</a>
-                <a href="/addbook.php"><i class="fa-sharp fa-solid fa-book"></i>Add Book</a>
+            <div class="card-container">
+                <div class="navigation card-content">
+                    <a href="/index.php"><i class="fa-sharp fa-solid fa-home"></i>Home</a>
+                    <a href="/addbook.php"><i class="fa-sharp fa-solid fa-book"></i>Add Book</a>
+                </div>
             </div>
-            <div class="main-content">
-                <h1>Add new book</h1>
+            <div class="main-content-container">
+                <div class="card-container">
+                    <div class="card-content">
+                        <h1>Add new book</h1>
+                    </div>
+                </div>
 
-                <form action="/addbook.php" method="post" class="card-container">
-                    <div class="form-row">
-                        <div class="key">
-                            <label for="title">title:</label> 
-                        </div>
-                        <div class="value">
-                            <input type="text" id="title" name="title">
-                        </div>
+                <div class="card-container">
+                    <div class="card-content">
+                        <form action="/addbook.php" method="post">
+                            <div class="form-row">
+                                <div class="key">
+                                    <label for="title">title:</label> 
+                                </div>
+                                <div class="value">
+                                    <input type="text" id="title" name="title">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="key">
+                                    <label for="author">author:</label> 
+                                </div>
+                                <div class="value">
+                                    <input type="text" id="author" name="author">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="key">
+                                    <label for="comment">review:</label> 
+                                </div>
+                                <div class="value">
+                                    <input type="text" id="comment" name="comment">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="key">
+                                    <label for="publishing_year">publishing year:</label> 
+                                </div>
+                                <div class="value">
+                                    <input type="text" id="publishing_year" name="publishing_year">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="key">
+                                    <label for="cover_image">cover:</label> 
+                                </div>
+                                <div class="value">
+                                    <input type="text" id="cover_image" name="cover_image">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="key">
+                                    <label for="genre">genre:</label> 
+                                </div>
+                                <div class="value">
+                                    <input type="text" id="genre" name="genre">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <input type="submit" value="Add">
+                            </div>
+                        </form> 
                     </div>
-                    <div class="form-row">
-                        <div class="key">
-                            <label for="author">author:</label> 
-                        </div>
-                        <div class="value">
-                            <input type="text" id="author" name="author">
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="key">
-                            <label for="comment">review:</label> 
-                        </div>
-                        <div class="value">
-                            <input type="text" id="comment" name="comment">
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="key">
-                            <label for="publishing_year">publishing year:</label> 
-                        </div>
-                        <div class="value">
-                            <input type="text" id="publishing_year" name="publishing_year">
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="key">
-                            <label for="cover_image">cover:</label> 
-                        </div>
-                        <div class="value">
-                            <input type="text" id="cover_image" name="cover_image">
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="key">
-                            <label for="genre">genre:</label> 
-                        </div>
-                        <div class="value">
-                            <input type="text" id="genre" name="genre">
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <input type="submit" value="Add">
-                    </div>
-                </form> 
+                </div>
             </div>
         </div>
 

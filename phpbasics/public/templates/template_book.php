@@ -42,46 +42,51 @@
         <link rel="stylesheet" href="/media/styles/theme_book.css">
     </head>
     <body>
-        <div class="page-container book-theme">
-            <div class="navigation card-container">
-                <a href="/index.php"><i class="fa-sharp fa-solid fa-home"></i>Home</a>
-                <a href="/addbook.php"><i class="fa-sharp fa-solid fa-book"></i>Add Book</a>
+        <div class="page-container">
+            <div class="card-container">
+                <div class="navigation card-content">
+                    <a href="/index.php"><i class="fa-sharp fa-solid fa-home"></i>Home</a>
+                    <a href="/addbook.php"><i class="fa-sharp fa-solid fa-book"></i>Add Book</a>
+                </div>
             </div>
-            <div class="main-content">
+            <div class="main-content-container">
                 <div class="card-container">
-                    <h1><?= $book["title"] ?> von <?= $book["author"] ?></h1>
+                    <div class="card-content">
+                        <h1><?= $book["title"] ?> von <?= $book["author"] ?></h1>
+                    </div>
                 </div>
 
-                <div class="book-data-container card-container">
-                    <div class="cover-image"> 
-                        <img src="/media/images/<?= $book["cover_image"] ?>" />
+                <div class="card-container">
+                    <div class="book-data-container card-content">
+                        <div class="cover-image"> 
+                            <img src="/media/images/<?= $book["cover_image"] ?>" />
+                        </div>
+                    
+                        <table class="item-data">
+                            <tbody>
+                                <tr>
+                                    <th>title:</th>
+                                    <td><?= $book["title"] ?></td>
+                                </tr>
+                                <tr>
+                                    <th>author:</th>
+                                    <td><?= $book["author"] ?></td>
+                                </tr>
+                                <tr>
+                                    <th>publishing year:</th>
+                                    <td><?= $book["publishing_year"] ?></td>
+                                </tr>
+                                <tr>
+                                    <th>review</th>
+                                    <td><?= $book["comment"] ?></td>
+                                </tr>
+                                <tr>
+                                    <th>genre</th>
+                                    <td><?= $book["genre"] ?></td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
-                
-                    <table class="item-data">
-                        <tbody>
-                            <tr>
-                                <th>title:</th>
-                                <td><?= $book["title"] ?></td>
-                            </tr>
-                            <tr>
-                                <th>author:</th>
-                                <td><?= $book["author"] ?></td>
-                            </tr>
-                            <tr>
-                                <th>publishing year:</th>
-                                <td><?= $book["publishing_year"] ?></td>
-                            </tr>
-                            <tr>
-                                <th>review</th>
-                                <td><?= $book["comment"] ?></td>
-                            </tr>
-                            <tr>
-                                <th>genre</th>
-                                <td><?= $book["genre"] ?></td>
-                            </tr>
-                        </tbody>
-                    </table>
-
                 </div>
                 <!-- <div>
                     <label for="genre">Choose a genre:</label>

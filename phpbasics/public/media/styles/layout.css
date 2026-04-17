@@ -1,19 +1,32 @@
 .page-container {
     xborder: thin green solid;
     margin: 0px auto;
-    max-width: 1000px;
+    max-width: 900px;
+    
 }
 
-.main-content {
-    xborder: thin blue solid;
-    padding: 50px;
+.main-content-container {
+    margin: 50px 0 50px 0;
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
+.card-container {
+    padding-top: 0.01px; /* hack to prevent margin collapse */
+    padding-bottom: 0.01px; /* hack to prevent margin collapse */
+    width: 100%;
+}
+
+.card-content {
+    margin: 10px;
+}
+
 .navigation {
-    padding: 10px 50px 10px 50px;
+    /* padding: 10px 50px 10px 50px; */
+    /* display: flex;
+    flex-direction: row;
+    gap: 50px; */
 }
 
 th, td {

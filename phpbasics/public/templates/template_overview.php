@@ -42,50 +42,55 @@
         <link rel="stylesheet" href="/media/styles/theme_overview.css">
     </head>
     <body>
-        <div class="page-container overview-theme">
-           <div class="navigation card-container">
-                <a href="/index.php"><i class="fa-sharp fa-solid fa-home"></i>Home</a>
-                <a href="/addbook.php"><i class="fa-sharp fa-solid fa-book"></i>Add Book</a>
+        <div class="page-container">
+            <div class="card-container">
+                <div class="navigation card-content">
+                    <a href="/index.php"><i class="fa-sharp fa-solid fa-home"></i>Home</a>
+                    <a href="/addbook.php"><i class="fa-sharp fa-solid fa-book"></i>Add Book</a>
+                </div>
             </div>
-            <div class="main-content">
+            <div class="main-content-container">
                 <div class="card-container">
-                    <h1>Bücher-Verwaltung: Übersicht</h1>
+                    <div class="card-content">
+                        <h1>Bücher-Verwaltung: Übersicht</h1>
+                    </div>
                 </div>
 
                 <div class="item-summary-list">
                     <?php foreach ($books as $key => $book) : ?>
-                        <div class="book-data-container card-container">
-                            <div class="cover-image"> 
-                            <img src="/media/images/<?= $book["cover_image"] ?>" />
+                        <div class="card-container">
+                            <div class="book-data-container card-content">
+                                <div class="cover-image"> 
+                                <img src="/media/images/<?= $book["cover_image"] ?>" />
+                                </div>
+                            
+                                <table class="item-data">
+                                    <tbody>
+                                        <tr>
+                                            <th>title:</th>
+                                            <td><a href="/index.php/book/<?= $key+1 ?>">
+                                                        <?= $book["title"] ?>
+                                                    </a></td>
+                                        </tr>
+                                        <tr>
+                                            <th>author:</th>
+                                            <td><?= $book["author"] ?></td>
+                                        </tr>
+                                        <tr>
+                                            <th>publishing year:</th>
+                                            <td><?= $book["publishing_year"] ?></td>
+                                        </tr>
+                                        <tr>
+                                            <th>review</th>
+                                            <td><?= $book["comment"] ?></td>
+                                        </tr>
+                                        <tr>
+                                            <th>genre</th>
+                                            <td><?= $book["genre"] ?></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
-                        
-                            <table class="item-data">
-                                <tbody>
-                                    <tr>
-                                        <th>title:</th>
-                                        <td><a href="/index.php/book/<?= $key+1 ?>">
-                                                    <?= $book["title"] ?>
-                                                </a></td>
-                                    </tr>
-                                    <tr>
-                                        <th>author:</th>
-                                        <td><?= $book["author"] ?></td>
-                                    </tr>
-                                    <tr>
-                                        <th>publishing year:</th>
-                                        <td><?= $book["publishing_year"] ?></td>
-                                    </tr>
-                                    <tr>
-                                        <th>review</th>
-                                        <td><?= $book["comment"] ?></td>
-                                    </tr>
-                                    <tr>
-                                        <th>genre</th>
-                                        <td><?= $book["genre"] ?></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-
                         </div>
                     <?php endforeach ?>    
                 </div>
