@@ -1,36 +1,39 @@
 <?php
+    // print_r($_POST) . "<br />";
+    // echo count($_POST) . "<br />";
 
-/* $servername = "database";
-$username = "tamara";
-$password = "daniela";
-$dbname = "tamara";
+    if(count($_POST) > 0) {
 
-try {
-  $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-  // set the PDO error mode to exception
-  $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-//   echo "Connected successfully";
-} catch(PDOException $e) {
-  echo "Connection failed: " . $e->getMessage();
+        $servername = "database";
+        $username = "tamara";
+        $password = "daniela";
+        $dbname = "tamara";
+
+        try {
+            $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        } catch(PDOException $e) {
+            die("Could not connect. " . $e->getMessage());
+        }
+
+        $sqlColumns = array();
+        $sqlData = array();
+
+        foreach ($_POST as $key => $value) {
+            array_push($sqlColumns, $key);
+            array_push($sqlData, $value);
+        }
+
+        $sql = "INSERT INTO book (" . implode(", ", $sqlColumns) . ", user_id)
+            VALUES ('" . implode("', '", $sqlData) . "', 1)";
+
+        try {
+            $sql = $sql;
+            $conn->exec($sql);
+        } catch(PDOException $e) {
+            echo $sql . "<br>" . $e->getMessage();
+        }
 }
-
-$book = array();
-
-try {
-  $sql = "SELECT * FROM book WHERE id = 1";
-  $result = $conn->query($sql);
-  if ($result->rowCount() > 0) {
-    while($row = $result->fetch()) {
-        
-        $book = $row;
-    }
-    unset($result);
-  } else {
-    echo "No records found.";
-  }
-} catch(PDOException $e) {
-  echo "Error: " . $sql . "<br>";
-} */
 ?>
 <html>
     <head>
@@ -43,63 +46,40 @@ try {
     <body>
         <div class="page-container">
             <div class="navigation">
-                <a href="index.php">Home</a>
+                <a href="/index.php">Home</a><a href="/new.php">Add Book</a>
             </div>
             <div class="main-content">
-                <h1> von </h1>
-            <form action="/action_page.php">
-                <div class="form-row">
-                    <span class="key">
-                        <label for="title">title:</label> 
-                    </span>
-                    <span class="value">
-                       <input type="text" id="title" name="title">
-                    </span>
-                </div>
-                <div class="form-row">
-                    <span class="key">
-                        <label for="author">author:</label> 
-                    </span>
-                    <span class="value">
-                       <input type="text" id="author" name="author">
-                    </span>
-                </div>
-                <div class="form-row">
-                    <span class="key">
-                        <label for="comment">review:</label> 
-                    </span>
-                    <span class="value">
-                       <input type="text" id="comment" name="comment">
-                    </span>
-                </div>
-                <div class="form-row">
-                    <span class="key">
-                        <label for="publishing_year">publishing year:</label> 
-                    </span>
-                    <span class="value">
-                       <input type="text" id="publishing_year" name="publishing_year">
-                    </span>
-                </div>
-                <div class="form-row">
-                    <span class="key">
-                        <label for="cover">cover:</label> 
-                    </span>
-                    <span class="value">
-                       <input type="text" id="cover" name="cover">
-                    </span>
-                </div>
-                <div class="form-row">
-                    <span class="key">
-                        <label for="genre">genre:</label> 
-                    </span>
-                    <span class="value">
-                       <input type="text" id="genre" name="genre">
-                    </span>
-                </div>
-            </form> 
+                <h1>Add new book</h1>
 
-                
-               
+                <form action="/new.php" method="post">
+                    <div class="form-row">
+                        <label for="title">title:</label> 
+                        <input type="text" id="title" name="title">
+                    </div>
+                    <div class="form-row">
+                        <label for="author">author:</label> 
+                        <input type="text" id="author" name="author">
+                    </div>
+                    <div class="form-row">
+                        <label for="comment">review:</label> 
+                        <input type="text" id="comment" name="comment">
+                    </div>
+                    <div class="form-row">
+                        <label for="publishing_year">publishing year:</label> 
+                        <input type="text" id="publishing_year" name="publishing_year">
+                    </div>
+                    <div class="form-row">
+                        <label for="cover_image">cover:</label> 
+                        <input type="text" id="cover_image" name="cover_image">
+                    </div>
+                    <div class="form-row">
+                        <label for="genre">genre:</label> 
+                        <input type="text" id="genre" name="genre">
+                    </div>
+                    <div class="form-row">
+                        <input type="submit" value="Add">
+                    </div>
+                </form> 
             </div>
         </div>
 

@@ -57,3 +57,11 @@
     margin-bottom: 20px;
 }
 
+/* navigation */
+
+.navigation  {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
