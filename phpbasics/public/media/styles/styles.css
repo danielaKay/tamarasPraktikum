@@ -66,12 +66,17 @@
     min-width: 125px;
     padding-left: 5px;
     background-color: cornflowerblue;
+    color: aliceblue;
+    font-weight: bold;
 }
 
 .form-row .value {
     display: flex;
     flex-direction: row;
     align-items: center;
+}
+.form-row .value input {
+    height: 100%;
 }
 
 /* navigation */
