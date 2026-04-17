@@ -1,3 +1,29 @@
+body {
+    color: black;
+    background-color: lightgray;
+    font-family: "Roboto", sans-serif;
+    font-size: 17px;
+}
+
+.card-container {
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+h1, h2 {
+    color: var(--headline-text-color);
+}
+
+p {
+    color: var(--main-text-color);
+}
+
+a { 
+    color: var(--accent-text-color);
+}
+
+
 /* for overview page */
 .item-summary-list {
     display: flex;
@@ -32,10 +58,11 @@
 .item-data th {
     width: 25%;
     text-align: left;
-    background-color: lightgray;
+    color: var(--accent-text-color);
+    /* background-color: lightgray; */
 }
 .item-data td {
-    background-color: #eeeeee;
+    /* background-color: #eeeeee; */
 }
 
 .book-data-container {

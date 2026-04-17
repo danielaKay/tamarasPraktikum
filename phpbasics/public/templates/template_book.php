@@ -39,17 +39,20 @@
         <link rel="stylesheet" href="/media/styles/styles.css">
         <link rel="stylesheet" href="/media/styles/fonts.css">
         <link rel="stylesheet" href="/media/styles/layout.css">
+        <link rel="stylesheet" href="/media/styles/theme_book.css">
     </head>
     <body>
-        <div class="page-container">
-            <div class="navigation">
+        <div class="page-container book-theme">
+            <div class="navigation card-container">
                 <a href="/index.php"><i class="fa-sharp fa-solid fa-home"></i>Home</a>
-                <a href="/new.php"><i class="fa-sharp fa-solid fa-book"></i>Add Book</a>
+                <a href="/addbook.php"><i class="fa-sharp fa-solid fa-book"></i>Add Book</a>
             </div>
             <div class="main-content">
-                <h1><?= $book["title"] ?> von <?= $book["author"] ?></h1>
+                <div class="card-container">
+                    <h1><?= $book["title"] ?> von <?= $book["author"] ?></h1>
+                </div>
 
-                <div class="book-data-container">
+                <div class="book-data-container card-container">
                     <div class="cover-image"> 
                         <img src="/media/images/<?= $book["cover_image"] ?>" />
                     </div>

@@ -1,0 +1,31 @@
+:root {
+    --bg-color: #f1f1f1;
+    --card-bg-color: cadetblue; 
+    --main-text-color: #e6f4f1;
+    --accent-text-color: #befcfd;
+    --headline-text-color: #befcfd;
+
+    /* https://mycolor.space/?hex=%235F9EA0&sub=1 */
+}
+
+body {
+    color: var(--main-text-color);
+    background-color: var(--bg-color);
+}
+
+.card-container {
+    color: var(--main-text-color);
+    background-color: var(--card-bg-color);
+}
+
+h1, h2 {
+    color: var(--headline-text-color);
+}
+
+p {
+    color: var(--main-text-color);
+}
+
+a { 
+    color: var(--accent-text-color);
+}

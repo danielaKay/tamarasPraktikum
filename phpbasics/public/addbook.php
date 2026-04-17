@@ -43,17 +43,18 @@
         <link rel="stylesheet" href="/media/styles/styles.css">
         <link rel="stylesheet" href="/media/styles/fonts.css">
         <link rel="stylesheet" href="/media/styles/layout.css">
+        <link rel="stylesheet" href="/media/styles/theme_addbook.css">
     </head>
     <body>
         <div class="page-container">
-             <div class="navigation">
+             <div class="navigation card-container">
                 <a href="/index.php"><i class="fa-sharp fa-solid fa-home"></i>Home</a>
-                <a href="/new.php"><i class="fa-sharp fa-solid fa-book"></i>Add Book</a>
+                <a href="/addbook.php"><i class="fa-sharp fa-solid fa-book"></i>Add Book</a>
             </div>
             <div class="main-content">
                 <h1>Add new book</h1>
 
-                <form action="/new.php" method="post">
+                <form action="/addbook.php" method="post" class="card-container">
                     <div class="form-row">
                         <div class="key">
                             <label for="title">title:</label> 

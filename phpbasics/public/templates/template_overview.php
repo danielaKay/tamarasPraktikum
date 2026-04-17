@@ -39,19 +39,22 @@
         <link rel="stylesheet" href="/media/styles/styles.css">
         <link rel="stylesheet" href="/media/styles/fonts.css">
         <link rel="stylesheet" href="/media/styles/layout.css">
+        <link rel="stylesheet" href="/media/styles/theme_overview.css">
     </head>
     <body>
-        <div class="page-container">
-           <div class="navigation">
+        <div class="page-container overview-theme">
+           <div class="navigation card-container">
                 <a href="/index.php"><i class="fa-sharp fa-solid fa-home"></i>Home</a>
-                <a href="/new.php"><i class="fa-sharp fa-solid fa-book"></i>Add Book</a>
+                <a href="/addbook.php"><i class="fa-sharp fa-solid fa-book"></i>Add Book</a>
             </div>
             <div class="main-content">
-                <h1>Bücher-Verwaltung: Übersicht</h1>
+                <div class="card-container">
+                    <h1>Bücher-Verwaltung: Übersicht</h1>
+                </div>
 
                 <div class="item-summary-list">
                     <?php foreach ($books as $key => $book) : ?>
-                        <div class="book-data-container">
+                        <div class="book-data-container card-container">
                             <div class="cover-image"> 
                             <img src="/media/images/<?= $book["cover_image"] ?>" />
                             </div>
