@@ -29,6 +29,25 @@
     } catch(PDOException $e) {
         echo $sql . "<br>" . $e->getMessage();
     }
+
+    
+    $cssGenre= "";
+    echo $book["genre"];
+    if ($book["genre"] == strtolower("mystery") )
+        $cssGenre = "mystery";
+    elseif ($book["genre"] == strtolower("high fantasy") )
+        $cssGenre = "highfantasy";
+    elseif ($book["genre"] == strtolower("Lovecraftian horror") ) {
+        echo "hier";
+        $cssGenre = "lovecraftianhorror";
+
+        }
+    elseif ($book["genre"] == strtolower("horror") )
+        $cssGenre = "horror";
+    elseif ($book["genre"] == strtolower("fantasy") )
+        $cssGenre = "fantasy";
+    else
+        $cssGenre = "book"; 
 ?>
 
 <html>
@@ -39,7 +58,7 @@
         <link rel="stylesheet" href="/media/styles/styles.css">
         <link rel="stylesheet" href="/media/styles/fonts.css">
         <link rel="stylesheet" href="/media/styles/layout.css">
-        <link rel="stylesheet" href="/media/styles/theme_book.css">
+        <link rel="stylesheet" href="/media/styles/theme_<?= $cssGenre ?>.css">
     </head>
     <body>
         <div class="page-container">
