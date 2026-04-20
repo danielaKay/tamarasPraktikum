@@ -63,7 +63,7 @@
                 </div>
 
                 <div class="item-summary-list">
-                    <?php foreach ($books as $key => $book) : ?>
+                    <?php foreach ($books as $book) : ?>
                         <div class="card-container">
                             <div class="book-data-container card-content">
                                 <div class="cover-image"> 
@@ -74,9 +74,10 @@
                                     <tbody>
                                         <tr>
                                             <th><i class="fa-icon fa-sharp fa-solid fa-scroll"></i>title:</th>
-                                            <td><a href="/index.php/book/<?= $key+1 ?>">
-                                                        <?= $book["title"] ?>
-                                                    </a></td>
+                                            <td><a href="/index.php/book/<?= $book["id"] ?>">
+                                                    <?= $book["title"] ?>
+                                                </a>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <th><i class="fa-icon fa-sharp fa-solid fa-pencil"></i>author:</th>
