@@ -32,22 +32,26 @@
 
     
     $cssGenre= "";
-    echo $book["genre"];
-    if ($book["genre"] == strtolower("mystery") )
+    if (strtolower($book["genre"]) == strtolower("mystery") )
         $cssGenre = "mystery";
-    elseif ($book["genre"] == strtolower("high fantasy") )
+    elseif (strtolower($book["genre"]) == strtolower("high fantasy") )
         $cssGenre = "highfantasy";
-    elseif ($book["genre"] == strtolower("Lovecraftian horror") ) {
-        echo "hier";
+    elseif (strtolower($book["genre"]) == strtolower("Lovecraftian horror") ) 
         $cssGenre = "lovecraftianhorror";
-
-        }
-    elseif ($book["genre"] == strtolower("horror") )
+    elseif (strtolower($book["genre"]) == strtolower("horror") )
         $cssGenre = "horror";
-    elseif ($book["genre"] == strtolower("fantasy") )
+    elseif (strtolower($book["genre"]) == strtolower("fantasy") )
         $cssGenre = "fantasy";
+    elseif (strtolower($book["genre"]) == strtolower("urban fantasy") )
+        $cssGenre = "urbanfantasy";
     else
-        $cssGenre = "book"; 
+        $cssGenre = "book";
+    
+    $coverfilename= "";
+    if ($book["cover_image"] == "")
+        $coverfilename = "no-cover.jpg";
+    else 
+        $coverfilename = $book["cover_image"];
 ?>
 
 <html>
@@ -84,7 +88,7 @@
                 <div class="card-container">
                     <div class="book-data-container card-content">
                         <div class="cover-image"> 
-                            <img src="/media/images/<?= $book["cover_image"] ?>" />
+                            <img src="/media/images/<?= $coverfilename ?>" />
                         </div>
                     
                         <table class="item-data">

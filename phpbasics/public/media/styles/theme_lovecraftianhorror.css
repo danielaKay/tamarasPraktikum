@@ -1,9 +1,9 @@
 :root {
     --bg-color: #03211C;
     --card-bg-color: #03342E; 
-    --main-text-color: #e6f4f1;
-    --accent-text-color: #befcfd;
-    --headline-text-color: red;
+    --main-text-color: rgb(183, 24, 24);
+    --accent-text-color: #7C0200;
+    --headline-text-color: rgb(179, 29, 29);
 
     /* https://mycolor.space/?hex=%235F9EA0 */
 }

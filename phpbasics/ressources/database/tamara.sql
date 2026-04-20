@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: database
--- Generation Time: Apr 20, 2026 at 08:18 AM
+-- Generation Time: Apr 20, 2026 at 12:35 PM
 -- Server version: 9.6.0
 -- PHP Version: 8.3.30
 
@@ -44,11 +44,15 @@ CREATE TABLE `book` (
 
 INSERT INTO `book` (`id`, `title`, `author`, `publishing_year`, `comment`, `user_id`, `cover_image`, `genre`) VALUES
 (1, 'Tiny dungeon: Zweite edition', 'Alan Bahr', '2021', 'ein schönes einsteigerfreundliches Regelwerk', 1, 'TinyDungeon2E_cover-900px.jpg', 'high fantasy'),
-(2, 'Investigators handbook', 'Sandy Petersen', '2016', 'ein gutes Buch wenn man Coc spielen möchte', 1, '26219453.jpg', 'Lovecraftian horror'),
+(2, 'Investigators handbook', 'Sandy Petersen', '2016', 'ein gutes Buch wenn man Coc spielen möchte', 1, 'Coc-handbook.jpg', 'Lovecraftian horror'),
 (3, 'Jäger die Vergeltung', 'Justin Achilli', '2000', 'eine interesannte perspektive in WOD', 1, 'Jaeger-Vergeltung-Cover.jpg', 'horror'),
 (13, 'Ein schöner Titel', 'John Smith', '2023', 'wow just', 1, '', 'sci-fi'),
 (14, 'Cthulhu by Gaslight - Investigators Guide', 'Keris McDonald', '2024', 'noch nicht gelesen', 1, 'Coc.jpg', 'mystery'),
-(15, 'Root - Das Rollenspiel: Grundregelwerk', 'Brenan Conway', '2024', 'noch nicht gelesen', 1, 'root.jpg', 'fantasy');
+(15, 'Root - Das Rollenspiel: Grundregelwerk', 'Brenan Conway', '2024', 'noch nicht gelesen', 1, 'root.jpg', 'fantasy'),
+(17, 'Vampire: The Masquerade ', 'Martin Ericsson', '2018', 'noch nicht gelesen', 1, 'Vampire-die-Maskerade.jpg', 'urban fantasy'),
+(18, 'Dungeon Masters Guide', 'Andrew borck', '2024', 'noch nicht gelesen', 1, 'Dmg.jpg', 'fantasy'),
+(19, 'Monsterhearts 2', 'Avery Alder', '2012', 'noch nicht gelesen', 1, 'monsterhearts.jpg', 'urban fantasy'),
+(20, 'Dune:Abenteuer im imperium', 'Nathan Dowdell', '2022', 'noch nicht gelesen', 1, 'Dune.webp', 'science-fiction');
 
 -- --------------------------------------------------------
 
@@ -88,7 +92,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `book`
 --
 ALTER TABLE `book`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `user`

@@ -64,10 +64,18 @@
 
                 <div class="item-summary-list">
                     <?php foreach ($books as $book) : ?>
+                        
+                        <?php
+                            $coverfilename= "";
+                            if ($book["cover_image"] == "")
+                                $coverfilename = "no-cover.jpg";
+                            else 
+                                $coverfilename = $book["cover_image"];
+                        ?>
                         <div class="card-container">
                             <div class="book-data-container card-content">
                                 <div class="cover-image"> 
-                                <img src="/media/images/<?= $book["cover_image"] ?>" />
+                                <img src="/media/images/<?= $coverfilename ?>" />
                                 </div>
                             
                                 <table class="item-data">

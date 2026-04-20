@@ -1,0 +1,9 @@
+:root {
+    --bg-color: rgb(33, 45, 45);
+    --card-bg-color: #375254; 
+    --main-text-color: goldenrod;
+    --accent-text-color: PaleTurquoise;
+    --headline-text-color: goldenrod;
+
+    /* https://mycolor.space/?hex=%235F9EA0 */
+}

@@ -1,5 +1,9 @@
-Titel= Tiny dungeon:Zweite edition Autor= Alan Bahr Bewertung= ein schönes einsteigerfreundliches Regelwerk Erscheinungsdatum= 2021
-Titel= Investigators handbook Autor= Sandy Petersen Bewertung= ein gutes Buch wenn man Coc spielen möchte   Erscheinungsdatum= 2016
-Titel= Jäger die Vergeltung Autor= Justin Achilli   Bewertung= eine interesannte perspektive in WOD         Erscheinungsdatum= 2000
-Titel= cthulhu by gaslight investigators guide Autor= Keris McDonald Bewertung= hab ich noch nicht gelesen  Erscheinungsdatum= 2024 genre= Mystery Image= Coc.jpg
-Titel= Root - Das Rollenspiel: Grundregelwerk Autor= Brenan conway Bewertunng= hab ich noch nicht gelesen   Erscheinungsdatum= 2024 genre= fantasy Image= root.jpg
+Titel= Tiny dungeon:Zweite edition             Autor= Alan Bahr        Bewertung= ein schönes einsteigerfreundliches Regelwerk Erscheinungsdatum= 2021
+Titel= Investigators handbook                  Autor= Sandy Petersen   Bewertung= ein gutes Buch wenn man Coc spielen möchte   Erscheinungsdatum= 2016
+Titel= Jäger die Vergeltung                    Autor= Justin Achilli   Bewertung= eine interesannte perspektive in WOD         Erscheinungsdatum= 2000
+Titel= cthulhu by gaslight investigators guide Autor= Keris McDonald   Bewertung= noch nicht gelesen                           Erscheinungsdatum= 2024 genre= Mystery           Image= Coc.jpg
+Titel= Root - Das Rollenspiel: Grundregelwerk  Autor= Brenan conway    Bewertung= noch nicht gelesen                           Erscheinungsdatum= 2024 genre= fantasy           Image= root.jpg
+Titel= Vampire: The Masquerade                 Autor= Martin Ericsson  Bewertung= noch nicht gelesen                           Erscheinungsdatum= 2018 genre= urban fantasy     image= Vampire-die-Maskerade.jpg
+Titel= Dungeon Masters Guide                   Autor= Andrew borck     Bewertung= noch nicht gelesen                           Erscheinungsdatum= 2024 genre= fantasy           Image= Dmg.jpg 
+Titel= Monsterhearts 2                         Autor= Avery Alder      Bewertung= noch nicht gelesen                           Erscheinungsdatum= 2012 genre= urban fantasy     image= monsterhearts.jpg    
+Titel= Dune:Abenteuer im imperium              Autor= Nathan Dowdell   Bewertung= noch nicht gelesen                           Erscheinungsdatum= 2022 genre= science-fiction   image= Dune.webp
