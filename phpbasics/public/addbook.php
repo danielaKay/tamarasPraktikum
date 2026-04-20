@@ -49,8 +49,14 @@
         <div class="page-container">
             <div class="card-container">
                 <div class="navigation card-content">
-                    <a href="/index.php"><i class="fa-sharp fa-solid fa-home"></i>Home</a>
-                    <a href="/addbook.php"><i class="fa-sharp fa-solid fa-book"></i>Add Book</a>
+                    <a href="/index.php">
+                        <i class="fa-icon fa-sharp fa-solid fa-home"></i>
+                        Home
+                    </a>
+                    <a href="/addbook.php">
+                        <i class="fa-icon fa-sharp fa-solid fa-book"></i>
+                        Add Book
+                    </a>
                 </div>
             </div>
             <div class="main-content-container">

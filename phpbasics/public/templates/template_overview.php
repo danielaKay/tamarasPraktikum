@@ -45,14 +45,20 @@
         <div class="page-container">
             <div class="card-container">
                 <div class="navigation card-content">
-                    <a href="/index.php"><i class="fa-sharp fa-solid fa-home"></i>Home</a>
-                    <a href="/addbook.php"><i class="fa-sharp fa-solid fa-book"></i>Add Book</a>
+                    <a href="/index.php">
+                        <i class="fa-icon fa-sharp fa-solid fa-home"></i>
+                        Home
+                    </a>
+                    <a href="/addbook.php">
+                        <i class="fa-icon fa-sharp fa-solid fa-book"></i>
+                        Add Book
+                    </a>
                 </div>
             </div>
             <div class="main-content-container">
                 <div class="card-container">
                     <div class="card-content">
-                        <h1>Bücher-Verwaltung: Übersicht</h1>
+                        <h1><i class="fa-icon fa-sharp fa-solid fa-book-open-reader"></i>Bücher-Verwaltung: Übersicht</h1>
                     </div>
                 </div>
 
@@ -67,25 +73,25 @@
                                 <table class="item-data">
                                     <tbody>
                                         <tr>
-                                            <th>title:</th>
+                                            <th><i class="fa-icon fa-sharp fa-solid fa-scroll"></i>title:</th>
                                             <td><a href="/index.php/book/<?= $key+1 ?>">
                                                         <?= $book["title"] ?>
                                                     </a></td>
                                         </tr>
                                         <tr>
-                                            <th>author:</th>
+                                            <th><i class="fa-icon fa-sharp fa-solid fa-pencil"></i>author:</th>
                                             <td><?= $book["author"] ?></td>
                                         </tr>
                                         <tr>
-                                            <th>publishing year:</th>
+                                            <th><i class="fa-icon fa-sharp fa-solid fa-calendar-days"></i>publishing year:</th>
                                             <td><?= $book["publishing_year"] ?></td>
                                         </tr>
                                         <tr>
-                                            <th>review</th>
+                                            <th><i class="fa-icon fa-sharp fa-solid fa-star"></i>review</th>
                                             <td><?= $book["comment"] ?></td>
                                         </tr>
                                         <tr>
-                                            <th>genre</th>
+                                            <th><i class="fa-icon fa-sharp fa-solid fa-clapperboard"></i>genre</th>
                                             <td><?= $book["genre"] ?></td>
                                         </tr>
                                     </tbody>

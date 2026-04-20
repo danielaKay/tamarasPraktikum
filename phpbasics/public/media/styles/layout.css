@@ -19,14 +19,14 @@
 }
 
 .card-content {
-    margin: 10px;
+    margin: 15px;
 }
 
 .navigation {
     /* padding: 10px 50px 10px 50px; */
-    /* display: flex;
+    display: flex;
     flex-direction: row;
-    gap: 50px; */
+    gap: 50px;
 }
 
 th, td {
