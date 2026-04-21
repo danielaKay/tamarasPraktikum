@@ -13,7 +13,6 @@
     }
 
     $books = array();
-
     try {
         $sql = "SELECT * FROM book";
         $result = $conn->query($sql);
@@ -29,6 +28,27 @@
     } catch(PDOException $e) {
         echo $sql . "<br>" . $e->getMessage();
     }
+
+    $bookmarks = array();
+    foreach($books as $book) {
+        
+        try {
+            $sql = "SELECT COUNT(*) FROM bookmark WHERE book_id = " . $book["id"] . ";";
+            $result = $conn->query($sql);
+            if ($result->rowCount() > 0) {
+                while($row = $result->fetch()) {
+                    $bookmarks[$book["id"]] = $row[0];
+                }
+                unset($result);
+            } else {
+                echo "No records found.";
+            }
+        } catch(PDOException $e) {
+            echo $sql . "<br>" . $e->getMessage();
+        }
+    }
+
+    
 ?>
 
 <html>
@@ -102,6 +122,10 @@
                                         <tr>
                                             <th><i class="fa-icon fa-sharp fa-solid fa-clapperboard"></i>genre</th>
                                             <td><?= $book["genre"] ?></td>
+                                        </tr>
+                                        <tr>
+                                            <th><i class="fa-icon fa-sharp fa-solid fa-bookmark"></i>bookmarks</th>
+                                            <td><?= $bookmarks[$book["id"]] ?></td>
                                         </tr>
                                     </tbody>
                                 </table>

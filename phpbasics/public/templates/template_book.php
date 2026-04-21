@@ -13,7 +13,6 @@
     }
 
     $book = array();
-
     try {
         $sql = "SELECT * FROM book WHERE id = $bookId";
         $result = $conn->query($sql);
@@ -24,7 +23,24 @@
             }
             unset($result);
         } else {
-            echo "No records found.";
+            echo "Book: No records found.";
+        }
+    } catch(PDOException $e) {
+        echo $sql . "<br>" . $e->getMessage();
+    }
+
+    $bookmarks = array();
+    try {
+        $sql = "SELECT * FROM bookmark WHERE book_id = $bookId";
+        $result = $conn->query($sql);
+        if ($result->rowCount() > 0) {
+            while($row = $result->fetch()) {
+                
+                $bookmarks[] = $row;
+            }
+            unset($result);
+        } else {
+            echo "Bookmark: No records found.";
         }
     } catch(PDOException $e) {
         echo $sql . "<br>" . $e->getMessage();
@@ -112,9 +128,20 @@
                                     <td><?= $book["comment"] ?></td>
                                 </tr>
                                 <tr>
-                                    <th>genre</th>
+                                    <th>genre:</th>
                                     <td><?= $book["genre"] ?></td>
                                 </tr>
+                                <?php if(count($bookmarks) > 0) : ?>
+                                    <tr>
+                                        <th>bookmarks:</th>
+                                        <td>
+                                            <?php foreach ($bookmarks as $bookmark) : ?>
+                                                Page: <?= $bookmark["page_number"] ?> =
+                                                "<?= $bookmark["comment"] ?>" <br />
+                                            <?php endforeach ?>
+                                        </td>
+                                    </tr>
+                                <?php endif ?>
                             </tbody>
                         </table>
                     </div>

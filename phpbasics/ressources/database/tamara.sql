@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: database
--- Generation Time: Apr 21, 2026 at 09:41 AM
+-- Generation Time: Apr 21, 2026 at 09:45 AM
 -- Server version: 9.6.0
 -- PHP Version: 8.3.30
 
@@ -59,6 +59,30 @@ INSERT INTO `book` (`id`, `title`, `author`, `publishing_year`, `comment`, `user
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `bookmark`
+--
+
+CREATE TABLE `bookmark` (
+  `id` int NOT NULL,
+  `page_number` varchar(4) NOT NULL,
+  `comment` varchar(256) NOT NULL,
+  `book_id` int NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `bookmark`
+--
+
+INSERT INTO `bookmark` (`id`, `page_number`, `comment`, `book_id`) VALUES
+(1, '22', 'Überall dieselbe alte Leier. Das Layout ist fertig, der Text lässt auf sich warten. Damit das Layout nun nicht nackt im Raume steht und sich klein und leer vorkommt, springe ich ein: der Blindtext.', 2),
+(2, '49', 'Eine wunderbare Heiterkeit hat meine ganze Seele eingenommen, gleich den süßen Frühlingsmorgen, die ich mit ganzem Herzen genieße.', 2),
+(3, '133', 'Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und Konsonantien leben die Blindtexte. Abgeschieden wohnen sie in Buchstabhausen an der Küste des Semantik, eines großen Sprachozeans.', 3),
+(4, '5', 'Er hörte leise Schritte hinter sich. Das bedeutete nichts Gutes. Wer würde ihm schon folgen, spät in der Nacht und dazu noch in dieser engen Gasse mitten im übel beleumundeten Hafenviertel?', 14),
+(5, '19', 'Dies ist ein Typoblindtext. An ihm kann man sehen, ob alle Buchstaben da sind und wie sie aussehen.', 14);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `user`
 --
 
@@ -75,9 +99,9 @@ CREATE TABLE `user` (
 --
 
 --
--- Indexes for table `book`
+-- Indexes for table `bookmark`
 --
-ALTER TABLE `book`
+ALTER TABLE `bookmark`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -91,10 +115,10 @@ ALTER TABLE `user`
 --
 
 --
--- AUTO_INCREMENT for table `book`
+-- AUTO_INCREMENT for table `bookmark`
 --
-ALTER TABLE `book`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+ALTER TABLE `bookmark`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `user`
