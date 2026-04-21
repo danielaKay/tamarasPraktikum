@@ -44,6 +44,8 @@
         $cssGenre = "fantasy";
     elseif (strtolower($book["genre"]) == strtolower("urban fantasy") )
         $cssGenre = "urbanfantasy";
+    elseif (strtolower($book["genre"]) == strtolower("science-fiction") )
+        $cssGenre = "sciencefiction";
     else
         $cssGenre = "book";
     
