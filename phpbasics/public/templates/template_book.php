@@ -120,12 +120,8 @@
                             </div>
 
                             <div>
-                                <form action="/deletebook.php/book/<?= $book["id"] ?>" method="post">
-                                    <input type="submit" value="Delete" />
-                                </form>
-                                <form action="/editbook.php/book/<?= $book["id"] ?>" method="post">
-                                    <input type="submit" value="Edit" />
-                                </form>
+                                <a href="/deletebook.php/book/<?= $book["id"] ?>">Delete</a>
+                                <a href="/editbook.php/book/<?= $book["id"] ?>">Edit</a>
                             </div>
 
                         </div>
