@@ -132,7 +132,7 @@ a {
 .readingstatus {
     width: 100%;
     height: 10px;
-    background-color: var(--main-text-color);
+    background-color: var(--bg-color);
     border-radius: 5px;
     position: relative;
 }
@@ -143,6 +143,6 @@ a {
     height: 10px;
     background-color: var(--accent-text-color);
     border-radius: 5px;
-    box-shadow: 0 2px 5px 0 black;
+    box-shadow: 0 5px 5px 0 #444444;
 }
 

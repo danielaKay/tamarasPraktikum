@@ -61,8 +61,7 @@
         <link rel="stylesheet" href="/media/styles/layout.css">
         <link rel="stylesheet" href="/media/styles/theme_overview.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <script src="/media/scripts/readingstatus.js">
-        </script>
+        <script src="/media/scripts/readingstatus.js"></script>
     </head>
     <body>
         <div class="page-container">
