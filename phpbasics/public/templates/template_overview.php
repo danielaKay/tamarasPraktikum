@@ -60,6 +60,9 @@
         <link rel="stylesheet" href="/media/styles/fonts.css">
         <link rel="stylesheet" href="/media/styles/layout.css">
         <link rel="stylesheet" href="/media/styles/theme_overview.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="/media/scripts/readingstatus.js">
+        </script>
     </head>
     <body>
         <div class="page-container">
@@ -94,8 +97,17 @@
                         ?>
                         <div class="card-container">
                             <div class="book-data-container card-content">
-                                <div class="cover-image"> 
-                                <img src="/media/images/<?= $coverfilename ?>" />
+                                <div class="left-container">
+                                    <div class="cover-image"> 
+                                        <img src="/media/images/<?= $coverfilename ?>" />
+                                    </div>
+                                    <div 
+                                        class="js-readingstatus readingstatus" 
+                                        data-total-number="<?= $book["total_page_number"] ?>" 
+                                        data-read-number="<?= $book["read_page_number"] ?>">
+                                        <div class="js-readingstatus-progress readingstatus-progress"></div>
+                                    </div>
+
                                 </div>
                             
                                 <table class="item-data">

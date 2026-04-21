@@ -32,3 +32,9 @@
 th, td {
     padding: 5px;
 }
+
+.left-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
