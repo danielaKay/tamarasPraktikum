@@ -117,6 +117,7 @@ a {
     border-left: thin solid var(--accent-text-color);
     border-bottom: thin solid var(--accent-text-color);
     width: 250px;
+    color: var(--accent-text-color);
 }
 
 .form-row input[type=submit] {

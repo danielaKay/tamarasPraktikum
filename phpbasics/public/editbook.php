@@ -100,7 +100,7 @@
                                     <label for="title">title:</label> 
                                 </div>
                                 <div class="value">
-                                    <input type="text" id="title" name="title">
+                                    <input type="text" id="title" name="title"value="<?= $book["title"] ?>">
                                 </div>
                             </div>
                             <div class="form-row">
@@ -108,7 +108,7 @@
                                     <label for="author">author:</label> 
                                 </div>
                                 <div class="value">
-                                    <input type="text" id="author" name="author">
+                                    <input type="text" id="author" name="author"value="<?= $book["author"] ?>">
                                 </div>
                             </div>
                             <div class="form-row">
@@ -116,7 +116,7 @@
                                     <label for="comment">review:</label> 
                                 </div>
                                 <div class="value">
-                                    <input type="text" id="comment" name="comment">
+                                    <input type="text" id="comment" name="comment" value="<?= $book["comment"] ?>">
                                 </div>
                             </div>
                             <div class="form-row">
@@ -137,7 +137,7 @@
                                     <label for="cover_image">cover:</label> 
                                 </div>
                                 <div class="value">
-                                    <input type="text" id="cover_image" name="cover_image">
+                                    <input type="text" id="cover_image" name="cover_image"value="<?= $book["cover_image"] ?>">
                                 </div>
                             </div>
                             <div class="form-row">
@@ -145,7 +145,23 @@
                                     <label for="genre">genre:</label> 
                                 </div>
                                 <div class="value">
-                                    <input type="text" id="genre" name="genre">
+                                    <input type="text" id="genre" name="genre"value="<?= $book["genre"] ?>">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="key">
+                                    <label for="total_page_number">total page number:</label> 
+                                </div>
+                                <div class="value">
+                                    <input type="text" id="total_page_number" name="total_page_number"value="<?= $book["total_page_number"] ?>">
+                                </div>
+                            </div>
+                             <div class="form-row">
+                                <div class="key">
+                                    <label for="read_page_number">read page number:</label> 
+                                </div>
+                                <div class="value">
+                                    <input type="text" id="read_page_number" name="read_page_number"value="<?= $book["read_page_number"] ?>">
                                 </div>
                             </div>
                             <div class="form-row">
