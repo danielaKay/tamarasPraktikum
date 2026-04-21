@@ -131,6 +131,7 @@
                                     <th>genre:</th>
                                     <td><?= $book["genre"] ?></td>
                                 </tr>
+                                
                                 <?php if(count($bookmarks) > 0) : ?>
                                     <tr>
                                         <th>bookmarks:</th>
@@ -142,6 +143,14 @@
                                         </td>
                                     </tr>
                                 <?php endif ?>
+                                <tr>
+                                    <th>total page number</th>
+                                    <td><?= $book["total_page_number"] ?></td>
+                                </tr>
+                                <tr>
+                                    <th>read page number</th>
+                                    <td><?= $book["read_page_number"] ?></td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
