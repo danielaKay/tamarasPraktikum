@@ -6,13 +6,54 @@
     // if (isset($urlController)) echo "urlController: " . $urlController . "<br />";
     // if (isset($urlParam)) echo "urlParam " . $urlParam . "<br />";
 
-    if (isset($urlController) && isset($urlParam)) {
-        $bookId = $urlParam;
+    $bookId = "";
 
-        $servername = "database";
-        $username = "tamara";
-        $password = "daniela";
-        $dbname = "tamara";
+    if (isset($urlParam)) {
+        $bookId = $urlParam;
+    }
+
+    if (isset($_POST['bookid'])) {
+        $bookId = $_POST['bookid'];
+    }
+
+    $servername = "database";
+    $username = "tamara";
+    $password = "daniela";
+    $dbname = "tamara";
+
+    if(count($_POST) > 0) {
+        try {
+            $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        } catch(PDOException $e) {
+            die("Could not connect. " . $e->getMessage());
+        }
+
+        $sqlData = "";
+
+        foreach ($_POST as $key => $value) {
+            if($key != "bookid" && $value != "") {
+                if($sqlData == "") {
+                    $sqlData .= $key . " = '"  . $value .  "' ";
+                } else {
+                    $sqlData .= ", " . $key . " = '"  . $value .  "' ";
+                }
+            }
+        }
+
+        $sql = "UPDATE book
+            SET $sqlData
+            WHERE id = " . $_POST['bookid'] . ";";
+
+        try {
+            $sql = $sql;
+            $conn->exec($sql);
+        } catch(PDOException $e) {
+            echo $sql . "<br>" . $e->getMessage();
+        }
+    } 
+    
+    if (isset($bookId)) {
 
         try {
             $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
@@ -54,10 +95,8 @@
         } catch(PDOException $e) {
             echo $sql . "<br>" . $e->getMessage();
         }
-
-    } else {
-        echo "error";
     }
+    
 
 
 ?>
@@ -94,7 +133,8 @@
 
                 <div class="card-container">
                     <div class="card-content">
-                        <form action="/addbook.php" method="post">
+                        <form action="/editbook.php" method="post">
+                            <input type="hidden" name="bookid" id="bookid" value="<?= $book["id"] ?>" />
                             <div class="form-row">
                                 <div class="key">
                                     <label for="title">title:</label> 
@@ -148,6 +188,23 @@
                                     <input type="text" id="genre" name="genre"value="<?= $book["genre"] ?>">
                                 </div>
                             </div>
+
+                            <!-- <?php if(count($bookmarks) > 0) : ?>
+                                <div class="form-row">
+                                    <div class="key">
+                                        <label for="genre">bookmarks:</label> 
+                                    </div>
+                                    <div class="value">
+                                        <?php foreach ($bookmarks as $bookmark) : ?>
+                                            <div>
+                                                <input type="text" id="genre" name="genre"value="<?= $bookmark["page_number"] ?>">
+                                                <input type="text" id="genre" name="genre"value="<?= $bookmark["comment"] ?>"> 
+                                            </div>
+                                        <?php endforeach ?>
+                                    </div>
+                                </div>
+                            <?php endif ?> -->
+
                             <div class="form-row">
                                 <div class="key">
                                     <label for="total_page_number">total page number:</label> 
