@@ -119,6 +119,15 @@
                                 <div class="js-readingstatus-progress readingstatus-progress"></div>
                             </div>
 
+                            <div>
+                                <form action="/deletebook.php/book/<?= $book["id"] ?>" method="post">
+                                    <input type="submit" value="Delete" />
+                                </form>
+                                <form action="/editbook.php/book/<?= $book["id"] ?>" method="post">
+                                    <input type="submit" value="Edit" />
+                                </form>
+                            </div>
+
                         </div>
                     
                         <table class="item-data">
