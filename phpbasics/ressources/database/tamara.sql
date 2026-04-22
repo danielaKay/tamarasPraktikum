@@ -95,13 +95,15 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Indexes for dumped tables
---
-
---
 -- Indexes for table `bookmark`
 --
 ALTER TABLE `bookmark`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `book`
+--
+ALTER TABLE `book`
   ADD PRIMARY KEY (`id`);
 
 --
