@@ -29,15 +29,15 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `book` (
   `id` int NOT NULL,
-  `title` varchar(256) NOT NULL,
-  `author` varchar(256) NOT NULL,
-  `publishing_year` varchar(256) NOT NULL,
-  `comment` varchar(256) NOT NULL,
-  `user_id` int NOT NULL,
-  `cover_image` varchar(256) NOT NULL,
-  `genre` varchar(256) NOT NULL,
-  `total_page_number` varchar(4) NOT NULL,
-  `read_page_number` varchar(4) NOT NULL
+  `title` varchar(256) DEFAULT '' NOT NULL,
+  `author` varchar(256) DEFAULT '' NOT NULL,
+  `publishing_year` varchar(256) DEFAULT '' NOT NULL,
+  `comment` varchar(256) DEFAULT '' NOT NULL,
+  `user_id` int DEFAULT '' NOT NULL,
+  `cover_image` varchar(256) DEFAULT '' NOT NULL,
+  `genre` varchar(256) DEFAULT '' NOT NULL,
+  `total_page_number` varchar(4) DEFAULT '' NOT NULL,
+  `read_page_number` varchar(4) DEFAULT '' NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -64,9 +64,9 @@ INSERT INTO `book` (`id`, `title`, `author`, `publishing_year`, `comment`, `user
 
 CREATE TABLE `bookmark` (
   `id` int NOT NULL,
-  `page_number` varchar(4) NOT NULL,
-  `comment` varchar(256) NOT NULL,
-  `book_id` int NOT NULL
+  `page_number` varchar(4) DEFAULT '' NOT NULL,
+  `comment` varchar(256) DEFAULT '' NOT NULL,
+  `book_id` int DEFAULT '' NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -88,10 +88,10 @@ INSERT INTO `bookmark` (`id`, `page_number`, `comment`, `book_id`) VALUES
 
 CREATE TABLE `user` (
   `id` int NOT NULL,
-  `username` varchar(256) NOT NULL,
-  `firstname` varchar(256) NOT NULL,
-  `lastname` varchar(256) NOT NULL,
-  `email` varchar(256) NOT NULL
+  `username` varchar(256) DEFAULT '' NOT NULL,
+  `firstname` varchar(256) DEFAULT '' NOT NULL,
+  `lastname` varchar(256) DEFAULT '' NOT NULL,
+  `email` varchar(256) DEFAULT '' NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
