@@ -120,8 +120,12 @@
                             </div>
 
                             <div>
-                                <a href="/deletebook.php/book/<?= $book["id"] ?>">Delete</a>
-                                <a href="/editbook.php/book/<?= $book["id"] ?>">Edit</a>
+                                <a class="button-link" href="/deletebook.php/book/<?= $book["id"] ?>">
+                                <i class="fa-icon fa-sharp fa-solid fa-trash-can"></i>
+                                Delete</a>
+                                <a class="button-link" href="/editbook.php/book/<?= $book["id"] ?>">
+                                <i class="fa-icon fa-sharp fa-solid fa-file-pen"></i>
+                                Edit</a>
                             </div>
 
                         </div>

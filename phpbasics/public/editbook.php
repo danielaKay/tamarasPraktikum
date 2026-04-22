@@ -69,7 +69,7 @@
         <link rel="stylesheet" href="/media/styles/styles.css">
         <link rel="stylesheet" href="/media/styles/fonts.css">
         <link rel="stylesheet" href="/media/styles/layout.css">
-        <link rel="stylesheet" href="/media/styles/theme_addbook.css">
+        <link rel="stylesheet" href="/media/styles/theme_editbook.css">
     </head>
     <body>
         <div class="page-container">

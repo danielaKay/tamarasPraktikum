@@ -24,6 +24,10 @@ a {
     color: var(--accent-text-color);
     font-weight: bold;
 }
+.button-link {
+    display: inline-block;
+    margin-right: 20px;
+}
 
 .fa-icon {
     margin-right: 5px;

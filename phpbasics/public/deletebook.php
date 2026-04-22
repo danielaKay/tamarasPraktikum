@@ -43,7 +43,7 @@
         <link rel="stylesheet" href="/media/styles/styles.css">
         <link rel="stylesheet" href="/media/styles/fonts.css">
         <link rel="stylesheet" href="/media/styles/layout.css">
-        <link rel="stylesheet" href="/media/styles/theme_addbook.css">
+        <link rel="stylesheet" href="/media/styles/theme_deletebook.css">
     </head>
     <body>
         <div class="page-container">
@@ -62,7 +62,7 @@
             <div class="main-content-container">
                 <div class="card-container">
                     <div class="card-content">
-                        <h1>Add new book</h1>
+                        <h1>delete book</h1>
                     </div>
                 </div>
 
@@ -118,7 +118,7 @@
                                 </div>
                             </div>
                             <div class="form-row">
-                                <input type="submit" value="Add">
+                                <input type="submit" value="delete">
                             </div>
                         </form> 
                     </div>
