@@ -33,7 +33,7 @@ CREATE TABLE `book` (
   `author` varchar(256) DEFAULT '' NOT NULL,
   `publishing_year` varchar(256) DEFAULT '' NOT NULL,
   `comment` varchar(256) DEFAULT '' NOT NULL,
-  `user_id` int DEFAULT '' NOT NULL,
+  `user_id` int DEFAULT 0 NOT NULL,
   `cover_image` varchar(256) DEFAULT '' NOT NULL,
   `genre` varchar(256) DEFAULT '' NOT NULL,
   `total_page_number` varchar(4) DEFAULT '' NOT NULL,
@@ -66,7 +66,7 @@ CREATE TABLE `bookmark` (
   `id` int NOT NULL,
   `page_number` varchar(4) DEFAULT '' NOT NULL,
   `comment` varchar(256) DEFAULT '' NOT NULL,
-  `book_id` int DEFAULT '' NOT NULL
+  `book_id` int DEFAULT 0 NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
