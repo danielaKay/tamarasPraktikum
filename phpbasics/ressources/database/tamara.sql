@@ -111,19 +111,22 @@ ALTER TABLE `user`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
---
-
---
 -- AUTO_INCREMENT for table `bookmark`
 --
 ALTER TABLE `bookmark`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+COMMIT;
+
+--
+-- AUTO_INCREMENT for table `book`
+--
+ALTER TABLE `book`
   MODIFY `id` int NOT NULL AUTO_INCREMENT;
 COMMIT;
 
