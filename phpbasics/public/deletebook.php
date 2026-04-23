@@ -1,8 +1,11 @@
 <?php
-    // print_r($_POST) . "<br />";
-    // echo count($_POST) . "<br />";
+    $urlParams = explode("/", $_SERVER['REQUEST_URI']);
+    if(count($urlParams) > 2) $urlController = $urlParams[2];
+    if(count($urlParams) > 3) $urlParam = $urlParams[3];
+    // if (isset($urlController)) echo "urlController: " . $urlController . "<br />";
+    // if (isset($urlParam)) echo "urlParam " . $urlParam . "<br />";
 
-    if(count($_POST) > 0) {
+    if(isset($urlParam) && $urlParam != "") {
 
         $servername = "database";
         $username = "tamara";
@@ -16,16 +19,7 @@
             die("Could not connect. " . $e->getMessage());
         }
 
-        $sqlColumns = array();
-        $sqlData = array();
-
-        foreach ($_POST as $key => $value) {
-            array_push($sqlColumns, $key);
-            array_push($sqlData, $value);
-        }
-
-        $sql = "INSERT INTO book (" . implode(", ", $sqlColumns) . ", user_id)
-            VALUES ('" . implode("', '", $sqlData) . "', 1)";
+        $sql = "DELETE FROM book WHERE id = " . $urlParam . ";";
 
         try {
             $sql = $sql;
@@ -62,65 +56,13 @@
             <div class="main-content-container">
                 <div class="card-container">
                     <div class="card-content">
-                        <h1>delete book</h1>
+                        <h1>Delete book</h1>
                     </div>
                 </div>
 
                 <div class="card-container">
                     <div class="card-content">
-                        <form action="/addbook.php" method="post">
-                            <div class="form-row">
-                                <div class="key">
-                                    <label for="title">title:</label> 
-                                </div>
-                                <div class="value">
-                                    <input type="text" id="title" name="title">
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="key">
-                                    <label for="author">author:</label> 
-                                </div>
-                                <div class="value">
-                                    <input type="text" id="author" name="author">
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="key">
-                                    <label for="comment">review:</label> 
-                                </div>
-                                <div class="value">
-                                    <input type="text" id="comment" name="comment">
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="key">
-                                    <label for="publishing_year">publishing year:</label> 
-                                </div>
-                                <div class="value">
-                                    <input type="text" id="publishing_year" name="publishing_year">
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="key">
-                                    <label for="cover_image">cover:</label> 
-                                </div>
-                                <div class="value">
-                                    <input type="text" id="cover_image" name="cover_image">
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="key">
-                                    <label for="genre">genre:</label> 
-                                </div>
-                                <div class="value">
-                                    <input type="text" id="genre" name="genre">
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <input type="submit" value="delete">
-                            </div>
-                        </form> 
+                        <p>Book deleted</p>
                     </div>
                 </div>
             </div>

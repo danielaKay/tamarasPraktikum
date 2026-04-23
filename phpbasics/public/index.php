@@ -1,7 +1,7 @@
 <?php
 
     $urlParams = explode("/", $_SERVER['REQUEST_URI']);
-    echo $_SERVER['REQUEST_URI'] . "<br />";
+    // echo $_SERVER['REQUEST_URI'] . "<br />";
     if(count($urlParams) > 2) $urlController = $urlParams[2];
     if(count($urlParams) > 3) $urlParam = $urlParams[3];
     // if (isset($urlController)) echo "urlController: " . $urlController . "<br />";

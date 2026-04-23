@@ -1,9 +1,17 @@
 <?php
 
+    $urlParams = explode("/", $_SERVER['REQUEST_URI']);
+    if(count($urlParams) > 2) $urlController = $urlParams[2];
+    if(count($urlParams) > 3) $urlParam = $urlParams[3];
+    // if (isset($urlController)) echo "urlController: " . $urlController . "<br />";
+    // if (isset($urlParam)) echo "urlParam " . $urlParam . "<br />";
+
     $servername = "database";
     $username = "tamara";
     $password = "daniela";
     $dbname = "tamara";
+
+    $books = array();
 
     try {
         $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
@@ -12,9 +20,32 @@
         echo "Connection failed: " . $e->getMessage();
     }
 
+    if(isset($urlController) && $urlController == "filterbytag") {
+        $bookids = array();
+        try {
+            $sql = "SELECT book_id FROM tag WHERE name = '$urlParam';";
+            $result = $conn->query($sql);
+            if ($result->rowCount() > 0) {
+                while($row = $result->fetch()) {
+                    
+                    array_push($bookids, $row[0]);
+                }
+                unset($result);
+            } else {
+                echo "No records found.";
+            }
+        } catch(PDOException $e) {
+            echo $sql . "<br>" . $e->getMessage();
+        }
+        $sql = "SELECT * FROM book WHERE id IN ( " . implode(", ", $bookids) . ");";
+
+    } else {
+        $sql = "SELECT * FROM book";
+    }
+
     $books = array();
     try {
-        $sql = "SELECT * FROM book";
+        $sql = $sql;
         $result = $conn->query($sql);
         if ($result->rowCount() > 0) {
             while($row = $result->fetch()) {
@@ -28,6 +59,7 @@
     } catch(PDOException $e) {
         echo $sql . "<br>" . $e->getMessage();
     }
+
 
     $bookmarks = array();
     foreach($books as $book) {
@@ -82,6 +114,9 @@
                 <div class="card-container">
                     <div class="card-content">
                         <h1><i class="fa-icon fa-sharp fa-solid fa-book-open-reader"></i>Bücher-Verwaltung: Übersicht</h1>
+                        <?php if(isset($urlController) && $urlController == "filterbytag") : ?>
+                            <h2>Filtered by tag "<?= $urlParam ?>"</h2>
+                        <?php endif ?>
                     </div>
                 </div>
 
