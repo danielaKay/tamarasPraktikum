@@ -48,13 +48,22 @@ INSERT INTO `book` (`id`, `title`, `author`, `publishing_year`, `comment`, `user
 (1, 'Tiny dungeon: Zweite edition', 'Alan Bahr', '2021', 'ein schönes einsteigerfreundliches Regelwerk', 1, 'TinyDungeon2E_cover-900px.jpg', 'high fantasy', '208', '32'),
 (2, 'Investigators handbook', 'Sandy Petersen', '2016', 'ein gutes Buch wenn man Coc spielen möchte', 1, 'Coc-handbook.jpg', 'Lovecraftian horror', '284', ''),
 (3, 'Jäger die Vergeltung', 'Justin Achilli', '2000', 'eine interesannte perspektive in WOD', 1, 'Jaeger-Vergeltung-Cover.jpg', 'horror', '288', ''),
-(13, 'Ein schöner Titel', 'John Smith', '2023', 'wow just', 1, '', 'sci-fi', '253', ''),
-(14, 'Cthulhu by Gaslight - Investigators Guide', 'Keris McDonald', '2024', 'noch nicht gelesen', 1, 'Coc.jpg', 'mystery', '296', ''),
-(15, 'Root - Das Rollenspiel: Grundregelwerk', 'Brenan Conway', '2024', 'noch nicht gelesen', 1, 'root.jpg', 'fantasy', '256', '76'),
-(17, 'Vampire: The Masquerade ', 'Martin Ericsson', '2018', 'noch nicht gelesen', 1, 'Vampire-die-Maskerade.jpg', 'urban fantasy', '428', ''),
-(18, 'Dungeon Masters Guide', 'Andrew borck', '2024', 'noch nicht gelesen', 1, 'Dmg.jpg', 'fantasy', '384', ''),
-(19, 'Monsterhearts 2', 'Avery Alder', '2012', 'noch nicht gelesen', 1, 'monsterhearts.jpg', 'urban fantasy', '178', ''),
-(20, 'Dune:Abenteuer im imperium', 'Nathan Dowdell', '2022', 'noch nicht gelesen', 1, 'Dune.webp', 'science-fiction', '330', '');
+(4, 'Ein schöner Titel', 'John Smith', '2023', 'wow just', 1, '', 'sci-fi', '253', ''),
+(5, 'Cthulhu by Gaslight - Investigators Guide', 'Keris McDonald', '2024', 'noch nicht gelesen', 1, 'Coc.jpg', 'mystery', '296', ''),
+(6, 'Root - Das Rollenspiel: Grundregelwerk', 'Brenan Conway', '2024', 'noch nicht gelesen', 1, 'root.jpg', 'fantasy', '256', '76'),
+(7, 'Vampire: The Masquerade ', 'Martin Ericsson', '2018', 'noch nicht gelesen', 1, 'Vampire-die-Maskerade.jpg', 'urban fantasy', '428', ''),
+(8, 'Dungeon Masters Guide', 'Andrew borck', '2024', 'noch nicht gelesen', 1, 'Dmg.jpg', 'fantasy', '384', ''),
+(9, 'Monsterhearts 2', 'Avery Alder', '2012', 'noch nicht gelesen', 1, 'monsterhearts.jpg', 'urban fantasy', '178', ''),
+(10, 'Dune:Abenteuer im imperium', 'Nathan Dowdell', '2022', 'noch nicht gelesen', 1, 'Dune.webp', 'science-fiction', '330', '');
+
+INSERT INTO `book` (`id`, `title`, `author`, `comment`, `publishing_year`, `genre`, `cover_image`, `user_id` )
+VALUES
+(11, "Cyberpunk red", "Mike Pondsmith", "noch nicht gelesen", "2020", "Cyberpunk", "cyberpunkred.webp", 1),
+(12, "Alien:Das Rollenspiel", "Andrew Gaska", "noch nicht gelesen", "2019", "survival horror", "Alien.webp", 1),
+(13, "Shadowrun", "Jordan Weisman", "noch nicht gelesen", " 2005", "distopian fiction", "shadowrun.jpg", 1),
+(14, "Das Schwarze Auge", "Jens Ulrich", "noch nicht gelesen", "2015", "highfantasy", "DSA.webp", 1),
+(15, "Kult:divinity lost", "Robin Liljenberg", "noch nicht gelesen", "2018", "contemporary horror", "kultdivinitylost.webp", 1),
+(16, "Sigil and Shadowrun", "R.E. Davis", "noch nicht gelesen", "2021", "occult horror", "sigilandshadow.jpg", 1);
 
 -- --------------------------------------------------------
 
@@ -174,8 +183,21 @@ ALTER TABLE `user`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `book`
+--
+ALTER TABLE `book`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `book`
+--
+ALTER TABLE `book`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+COMMIT;
 
 --
 -- AUTO_INCREMENT for table `bookmark`
