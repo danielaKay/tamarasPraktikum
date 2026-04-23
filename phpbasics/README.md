@@ -1,9 +1,18 @@
 Bücherverwaltung, PHP-Version
 
+## Installieren:
+* Docker-Desktop
+* Git
+  - SSH Key anlegen
+* Code auschecken 
+```
+git clone git@github.com:danielaKay/tamarasPraktikum.git
+```
+
 ## hochfahren
 in der Kommandozeile:
-
 ``` 
+cd [pfad zum ordner phpbasics]
 docker compose up
 ``` 
 ausführen.
