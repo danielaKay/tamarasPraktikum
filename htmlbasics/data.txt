@@ -12,4 +12,4 @@ Titel= Alien:Das Rollenspiel                   Autor= Andrew Gaska     Bewertung
 Titel= Shadowrun                               Autor= Jordan Weisman   Bewertung= noch nicht gelesen                           Erscheinungsdatum= 2005 genre= distopian fiction     image= shadowrun.jpg
 Titel= Das Schwarze Auge                       Autor= Jens Ulrich      Bewertung= noch nicht gelesen                           Erscheinungsdatum= 2015 genre= highfantasy           image= DSA.webp
 Titel= Kult:divinity lost                      Autor= Robin Liljenberg Bewertung= noch nicht gelesen                           Erscheinungsdatum= 2018 genre= contemporary horror   image= kultdivinitylost.webp
-Titel= Sigil and Shadowrun                     Autor= R.E. Davis       Bewertung= noch nicht gelesen                           Erscheinungsdatum= 2021 genre= occult horror         image= sigilandshadow.jpg
+Titel= Sigil and Shadow                        Autor= R.E. Davis       Bewertung= noch nicht gelesen                           Erscheinungsdatum= 2021 genre= occult horror         image= sigilandshadow.jpg

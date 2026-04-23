@@ -224,7 +224,7 @@
                 <div class="card-container">
                     <div class="card-content">
                         
-                        <div class="js-tag-manager">
+                        <div class="js-tag-manager tag-manager">
                             <div class="tag-list">
                                 <?php if(count($tags) > 0) : ?>
                                     <?php foreach ($tags as $tag) : ?>
@@ -239,18 +239,21 @@
                                 <?php endif ?>
                             </div>
 
-                            <select name="tagselect" id="tagselect" class="tagselect">
-                                <?php if(count($tagnames) > 0) : ?>
-                                    <?php foreach ($tagnames as $tagname) : ?>
-                                        <option value="<?= $tagname['name'] ?>">
-                                            <?= $tagname['display_name'] ?>
-                                        </option>
-                                    <?php endforeach ?>
-                                <?php endif ?>
-                            </select>
 
-                            <input type="hidden" name="bookid" id="bookid" value="<?= $book["id"] ?>" />
-                            <input class="js-add-tag" type="submit" value="Add tag">
+                            <div>
+                                <select name="tagselect" id="tagselect" class="tagselect">
+                                    <?php if(count($tagnames) > 0) : ?>
+                                        <?php foreach ($tagnames as $tagname) : ?>
+                                            <option value="<?= $tagname['name'] ?>">
+                                                <?= $tagname['display_name'] ?>
+                                            </option>
+                                        <?php endforeach ?>
+                                    <?php endif ?>
+                                </select>
+
+                                <input type="hidden" name="bookid" id="bookid" value="<?= $book["id"] ?>" />
+                                <input class="js-add-tag" type="submit" value="Add tag">
+                            </div>
                         </div>
                     </div>
                 </div>
