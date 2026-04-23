@@ -1,9 +1,15 @@
 Titel= Tiny dungeon:Zweite edition             Autor= Alan Bahr        Bewertung= ein schönes einsteigerfreundliches Regelwerk Erscheinungsdatum= 2021
 Titel= Investigators handbook                  Autor= Sandy Petersen   Bewertung= ein gutes Buch wenn man Coc spielen möchte   Erscheinungsdatum= 2016
 Titel= Jäger die Vergeltung                    Autor= Justin Achilli   Bewertung= eine interesannte perspektive in WOD         Erscheinungsdatum= 2000
-Titel= cthulhu by gaslight investigators guide Autor= Keris McDonald   Bewertung= noch nicht gelesen                           Erscheinungsdatum= 2024 genre= Mystery           Image= Coc.jpg
-Titel= Root - Das Rollenspiel: Grundregelwerk  Autor= Brenan conway    Bewertung= noch nicht gelesen                           Erscheinungsdatum= 2024 genre= fantasy           Image= root.jpg
-Titel= Vampire: The Masquerade                 Autor= Martin Ericsson  Bewertung= noch nicht gelesen                           Erscheinungsdatum= 2018 genre= urban fantasy     image= Vampire-die-Maskerade.jpg
-Titel= Dungeon Masters Guide                   Autor= Andrew borck     Bewertung= noch nicht gelesen                           Erscheinungsdatum= 2024 genre= fantasy           Image= Dmg.jpg 
-Titel= Monsterhearts 2                         Autor= Avery Alder      Bewertung= noch nicht gelesen                           Erscheinungsdatum= 2012 genre= urban fantasy     image= monsterhearts.jpg    
-Titel= Dune:Abenteuer im imperium              Autor= Nathan Dowdell   Bewertung= noch nicht gelesen                           Erscheinungsdatum= 2022 genre= science-fiction   image= Dune.webp
+Titel= cthulhu by gaslight investigators guide Autor= Keris McDonald   Bewertung= noch nicht gelesen                           Erscheinungsdatum= 2024 genre= Mystery               Image= Coc.jpg
+Titel= Root - Das Rollenspiel: Grundregelwerk  Autor= Brenan conway    Bewertung= noch nicht gelesen                           Erscheinungsdatum= 2024 genre= fantasy               Image= root.jpg
+Titel= Vampire: The Masquerade                 Autor= Martin Ericsson  Bewertung= noch nicht gelesen                           Erscheinungsdatum= 2018 genre= urban fantasy         image= Vampire-die-Maskerade.jpg
+Titel= Dungeon Masters Guide                   Autor= Andrew borck     Bewertung= noch nicht gelesen                           Erscheinungsdatum= 2024 genre= fantasy               Image= Dmg.jpg 
+Titel= Monsterhearts 2                         Autor= Avery Alder      Bewertung= noch nicht gelesen                           Erscheinungsdatum= 2012 genre= urban fantasy         image= monsterhearts.jpg    
+Titel= Dune:Abenteuer im imperium              Autor= Nathan Dowdell   Bewertung= noch nicht gelesen                           Erscheinungsdatum= 2022 genre= science-fiction       image= Dune.webp
+Titel= Cyberpunk red                           Autor= Mike Pondsmith   Bewertung= noch nicht gelesen                           Erscheinungsdatum= 2020 genre= Cyberpunk             image= cyberpunkred.webp
+Titel= Alien:Das Rollenspiel                   Autor= Andrew Gaska     Bewertung= noch nicht gelesen                           Erscheinungsdatum= 2019 genre= survival horror       image= Alien.webp 
+Titel= Shadowrun                               Autor= Jordan Weisman   Bewertung= noch nicht gelesen                           Erscheinungsdatum= 2005 genre= distopian fiction     image= shadowrun.jpg
+Titel= Das Schwarze Auge                       Autor= Jens Ulrich      Bewertung= noch nicht gelesen                           Erscheinungsdatum= 2015 genre= highfantasy           image= DSA.webp
+Titel= Kult:divinity lost                      Autor= Robin Liljenberg Bewertung= noch nicht gelesen                           Erscheinungsdatum= 2018 genre= contemporary horror   image= kultdivinitylost.webp
+Titel= Sigil and Shadowrun                     Autor= R.E. Davis       Bewertung= noch nicht gelesen                           Erscheinungsdatum= 2021 genre= occult horror         image= sigilandshadow.jpg

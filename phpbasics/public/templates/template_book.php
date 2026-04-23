@@ -62,6 +62,16 @@
         $cssGenre = "urbanfantasy";
     elseif (strtolower($book["genre"]) == strtolower("science-fiction") )
         $cssGenre = "sciencefiction";
+    elseif (strtolower($book["genre"]) == strtolower("cyberpunk") )
+        $cssGenre = "cyberpunk";
+    elseif (strtolower($book["genre"]) == strtolower("survival horror") )
+        $cssGenre = "survivalhorror";
+    elseif (strtolower($book["genre"]) == strtolower("contemporary horror") )
+        $cssGenre = "contemporaryhorror";
+    elseif (strtolower($book["genre"]) == strtolower("occult horror") )
+        $cssGenre = "occulthorror";
+    elseif (strtolower($book["genre"]) == strtolower("dystopian fiction") )
+        $cssGenre = "dystopianfiction";
     else
         $cssGenre = "book";
     
@@ -176,6 +186,21 @@
                         </table>
                     </div>
                 </div>
+
+                <div class="card-container">
+                    <div class="card-content">
+                        <div class="tag-manager">
+                            <select name="taglist" id="taglist" class="taglist">
+                                <option value="unread">unread</option>
+                                <option value="read">read</option>
+                                <option value="finished">finished</option>
+                            </select>
+                            <br><br>
+                            <input type="submit" value="Submit">
+                        </div>
+                    </div>
+                </div>
+
                 <!-- <div>
                     <label for="genre">Choose a genre:</label>
                     <select name="genre" id="genre">
