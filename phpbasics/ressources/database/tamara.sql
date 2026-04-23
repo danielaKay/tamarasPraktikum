@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: database
--- Generation Time: Apr 23, 2026 at 11:32 AM
+-- Generation Time: Apr 23, 2026 at 01:03 PM
 -- Server version: 9.6.0
 -- PHP Version: 8.3.30
 
@@ -104,7 +104,6 @@ CREATE TABLE `tag` (
 --
 
 INSERT INTO `tag` (`id`, `name`, `display_name`, `book_id`) VALUES
-(11, 'reading', 'Reading', 1),
 (12, 'reading', 'Reading', 2),
 (13, 'reading', 'Reading', 3),
 (14, 'unread', 'Unread', 5),
@@ -118,7 +117,8 @@ INSERT INTO `tag` (`id`, `name`, `display_name`, `book_id`) VALUES
 (22, 'notowned', 'Not Owned', 13),
 (23, 'notowned', 'Not Owned', 14),
 (24, 'notowned', 'Not Owned', 15),
-(25, 'notowned', 'Not Owned', 16);
+(25, 'notowned', 'Not Owned', 16),
+(33, 'reading', 'Reading', 1);
 
 -- --------------------------------------------------------
 
@@ -129,18 +129,19 @@ INSERT INTO `tag` (`id`, `name`, `display_name`, `book_id`) VALUES
 CREATE TABLE `tagname` (
   `id` int NOT NULL,
   `name` varchar(256) NOT NULL,
-  `display_name` varchar(256) NOT NULL
+  `display_name` varchar(256) NOT NULL,
+  `icons` varchar(256) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `tagname`
 --
 
-INSERT INTO `tagname` (`id`, `name`, `display_name`) VALUES
-(1, 'reading', 'Reading'),
-(2, 'unread', 'Unread'),
-(3, 'read', 'Read'),
-(4, 'notowned', 'Not Owned');
+INSERT INTO `tagname` (`id`, `name`, `display_name`, `icons`) VALUES
+(1, 'reading', 'Reading', 'fa-book-open'),
+(2, 'unread', 'Unread', 'fa-book'),
+(3, 'read', 'Read', 'fa-book-bookmark'),
+(4, 'notowned', 'Not Owned', 'fa-binoculars');
 
 -- --------------------------------------------------------
 
@@ -210,7 +211,7 @@ ALTER TABLE `bookmark`
 -- AUTO_INCREMENT for table `tag`
 --
 ALTER TABLE `tag`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT for table `tagname`
