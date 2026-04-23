@@ -22,8 +22,7 @@
                 $apiParams[$paramArray[0]] = urldecode($paramArray[1]);
             }
 
-            if($apiTarget == "tags" && $apiParams["name"] != "" && $apiParams["book_id"] != "") {
-
+            if($_SERVER['REQUEST_METHOD'] == "POST" && $apiTarget == "tags" && $apiParams["name"] != "" && $apiParams["book_id"] != "") {
                 $servername = "database";
                 $username = "tamara";
                 $password = "daniela";
@@ -47,7 +46,30 @@
                 }
 
 
-            } else {
+            } elseif($_SERVER['REQUEST_METHOD'] == "DELETE" && $apiTarget == "tags" && $apiParams["id"] != "") {
+                $servername = "database";
+                $username = "tamara";
+                $password = "daniela";
+                $dbname = "tamara";
+
+                try {
+                    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+                    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                } catch(PDOException $e) {
+                    die("Could not connect. " . $e->getMessage());
+                }
+
+                $sql = "DELETE FROM tag WHERE id = " . $apiParams["id"] . ";";
+
+                try {
+                    $sql = $sql;
+                    $conn->exec($sql);
+                } catch(PDOException $e) {
+                    echo $sql . "<br>" . $e->getMessage();
+                }
+                
+            }
+            else {
                 echo "param error" . "<br />";
             }
 
