@@ -152,6 +152,13 @@ select.tagselect {
     justify-content: space-between;
 }
 
+.tag-display {
+    padding: 5px;
+}
+.tag-display a {
+   color:var(--main-text-color) ; 
+}
+
 input[type=submit] {
     background-color: var(--accent-text-color);
     border: 1px solid var(--bg-color);

@@ -165,7 +165,7 @@
 
                             <div>
                                 <a class="button-link" href="/deletebook.php/book/<?= $book["id"] ?>">
-                                <i class="fa-icon fa-sharp fa-solid fa-trash-can"></i>
+                                <i class="fa-icon fa-sharp fa-solid fa-file-circle-xmark"></i>
                                 Delete</a>
                                 <a class="button-link" href="/editbook.php/book/<?= $book["id"] ?>">
                                 <i class="fa-icon fa-sharp fa-solid fa-file-pen"></i>
@@ -229,9 +229,13 @@
                                 <?php if(count($tags) > 0) : ?>
                                     <?php foreach ($tags as $tag) : ?>
 
-                                        <div class="js-tag-display">
-                                            <span><?= $tag['display_name'] ?></span>
-                                            <span class="js-delete-tag">X</span>
+                                        <div class="js-tag-display tag-display">
+                                            <a href="/index.php/filterbytag/<?= $tag['name'] ?>">
+                                                <span><?= $tag['display_name'] ?></span>
+                                            </a>
+                                            <span class="js-delete-tag">
+                                                <i class="fa-icon fa-sharp fa-solid fa-trash-can"></i>
+                                            </span>
                                             <input type="hidden" name="tagid" id="tagid" value="<?= $tag["id"] ?>" />
                                         </div>
 
