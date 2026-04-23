@@ -11,10 +11,11 @@ $(document).ready(function() {
         var selectText = $(parentElement).find(":selected").text().trim();
 
         var bookId = $(parentElement).find("[type='hidden'][name='bookid']").val();
-        
+
         $.post( "/index.php/api/tags?name=" + encodeURIComponent(selectValue) + "&display_name=" + encodeURIComponent(selectText) +"&book_id=" + encodeURIComponent(bookId), function( data ) {
         }).done(function() {
             alert( "tag was added successfully" );
+            location.reload();
         })
         .fail(function() {
             alert( "an error occurred" );
@@ -34,6 +35,7 @@ $(document).ready(function() {
             type: "DELETE",
             success: function(result){
                 alert("tag was removed successfully");
+                location.reload();
             },
             fail:  function(result){
                 alert( "an error occurred" );
