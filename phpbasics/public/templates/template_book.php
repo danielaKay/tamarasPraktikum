@@ -223,17 +223,23 @@
 
                 <div class="card-container">
                     <div class="card-content">
-                        <div class="tag-list">
-                            <?php if(count($tags) > 0) : ?>
-                                <?php foreach ($tags as $tag) : ?>
+                        
+                        <div class="js-tag-manager">
+                            <div class="tag-list">
+                                <?php if(count($tags) > 0) : ?>
+                                    <?php foreach ($tags as $tag) : ?>
 
-                                    <?= $tag['display_name'] ?>
+                                        <div class="js-tag-display">
+                                            <span><?= $tag['display_name'] ?></span>
+                                            <span class="js-delete-tag">X</span>
+                                            <input type="hidden" name="tagid" id="tagid" value="<?= $tag["id"] ?>" />
+                                        </div>
 
-                                <?php endforeach ?>
-                            <?php endif ?>
-                        </div>
-                        <div class="tag-manager">
-                            <select name="taglist" id="taglist" class="taglist">
+                                    <?php endforeach ?>
+                                <?php endif ?>
+                            </div>
+
+                            <select name="tagselect" id="tagselect" class="tagselect">
                                 <?php if(count($tagnames) > 0) : ?>
                                     <?php foreach ($tagnames as $tagname) : ?>
                                         <option value="<?= $tagname['name'] ?>">
@@ -244,7 +250,7 @@
                             </select>
 
                             <input type="hidden" name="bookid" id="bookid" value="<?= $book["id"] ?>" />
-                            <input class="add-tag" type="submit" value="Add tag">
+                            <input class="js-add-tag" type="submit" value="Add tag">
                         </div>
                     </div>
                 </div>

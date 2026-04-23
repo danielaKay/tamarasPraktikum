@@ -132,7 +132,7 @@ a {
     border-radius: 16px;
 }
 
-select.taglist {
+select.tagselect {
    background-color: var(--main-text-color);
    width: 150px;
    padding: 5px;
