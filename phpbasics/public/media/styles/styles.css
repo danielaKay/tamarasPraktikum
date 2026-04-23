@@ -134,20 +134,22 @@ a {
 
 select.taglist {
    background-color: var(--main-text-color);
-   width: 150px;
+   width: 100px;
    padding: 5px;
    font-size: 16px;
    line-height: 1;
    border: 0;
    border-radius: 0;
-   height: 34px;
+   height: 30px;
    -webkit-appearance: none;
-   border: 1px solid var(--accent-text-color);
+   border: 1px solid var(--bg-color);
    
 }
 
 input[type=submit] {
     background-color: var(--accent-text-color);
+    border: 1px solid var(--bg-color);
+
 }
 
 /* navigation */
