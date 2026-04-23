@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: database
--- Generation Time: Apr 23, 2026 at 09:38 AM
+-- Generation Time: Apr 23, 2026 at 11:32 AM
 -- Server version: 9.6.0
 -- PHP Version: 8.3.30
 
@@ -54,16 +54,13 @@ INSERT INTO `book` (`id`, `title`, `author`, `publishing_year`, `comment`, `user
 (7, 'Vampire: The Masquerade ', 'Martin Ericsson', '2018', 'noch nicht gelesen', 1, 'Vampire-die-Maskerade.jpg', 'urban fantasy', '428', ''),
 (8, 'Dungeon Masters Guide', 'Andrew borck', '2024', 'noch nicht gelesen', 1, 'Dmg.jpg', 'fantasy', '384', ''),
 (9, 'Monsterhearts 2', 'Avery Alder', '2012', 'noch nicht gelesen', 1, 'monsterhearts.jpg', 'urban fantasy', '178', ''),
-(10, 'Dune:Abenteuer im imperium', 'Nathan Dowdell', '2022', 'noch nicht gelesen', 1, 'Dune.webp', 'science-fiction', '330', '');
-
-INSERT INTO `book` (`id`, `title`, `author`, `comment`, `publishing_year`, `genre`, `cover_image`, `user_id` )
-VALUES
-(11, "Cyberpunk red", "Mike Pondsmith", "noch nicht gelesen", "2020", "Cyberpunk", "cyberpunkred.webp", 1),
-(12, "Alien:Das Rollenspiel", "Andrew Gaska", "noch nicht gelesen", "2019", "survival horror", "Alien.webp", 1),
-(13, "Shadowrun", "Jordan Weisman", "noch nicht gelesen", " 2005", "distopian fiction", "shadowrun.jpg", 1),
-(14, "Das Schwarze Auge", "Jens Ulrich", "noch nicht gelesen", "2015", "highfantasy", "DSA.webp", 1),
-(15, "Kult:divinity lost", "Robin Liljenberg", "noch nicht gelesen", "2018", "contemporary horror", "kultdivinitylost.webp", 1),
-(16, "Sigil and Shadowrun", "R.E. Davis", "noch nicht gelesen", "2021", "occult horror", "sigilandshadow.jpg", 1);
+(10, 'Dune:Abenteuer im imperium', 'Nathan Dowdell', '2022', 'noch nicht gelesen', 1, 'Dune.webp', 'science-fiction', '330', ''),
+(11, 'Cyberpunk red', 'Mike Pondsmith', '2020', 'noch nicht gelesen', 1, 'cyberpunkred.webp', 'Cyberpunk', '450', ''),
+(12, 'Alien:Das Rollenspiel', 'Andrew Gaska', '2019', 'noch nicht gelesen', 1, 'Alien.webp', 'survival horror', '398', ''),
+(13, 'Shadowrun', 'Jordan Weisman', ' 2005', 'noch nicht gelesen', 1, 'shadowrun.jpg', 'distopian fiction', '408', ''),
+(14, 'Das Schwarze Auge', 'Jens Ulrich', '2015', 'noch nicht gelesen', 1, 'DSA.webp', 'highfantasy', '416', ''),
+(15, 'Kult:divinity lost', 'Robin Liljenberg', '2018', 'noch nicht gelesen', 1, 'kultdivinitylost.webp', 'contemporary horror', '384', ''),
+(16, 'Sigil and Shadow', 'R.E. Davis', '2021', 'noch nicht gelesen', 1, 'sigilandshadow.jpg', 'occult horror', '208', '');
 
 -- --------------------------------------------------------
 
@@ -107,16 +104,21 @@ CREATE TABLE `tag` (
 --
 
 INSERT INTO `tag` (`id`, `name`, `display_name`, `book_id`) VALUES
-(1, 'read', 'Read', 2),
-(2, 'unread', 'Unread', 3),
-(3, 'unread', 'Unread', 14),
-(4, 'unread', 'Unread', 15),
-(5, 'unread', 'Unread', 16),
-(6, 'unread', 'Unread', 16),
-(7, 'read', 'Read', 14),
-(8, 'read', 'Read', 16),
-(9, 'unread', 'Unread', 1),
-(10, 'notowned', 'Not Owned', 1);
+(11, 'reading', 'Reading', 1),
+(12, 'reading', 'Reading', 2),
+(13, 'reading', 'Reading', 3),
+(14, 'unread', 'Unread', 5),
+(15, 'reading', 'Reading', 6),
+(16, 'unread', 'Unread', 7),
+(17, 'unread', 'Unread', 8),
+(18, 'notowned', 'Not Owned', 9),
+(19, 'notowned', 'Not Owned', 10),
+(20, 'notowned', 'Not Owned', 11),
+(21, 'notowned', 'Not Owned', 12),
+(22, 'notowned', 'Not Owned', 13),
+(23, 'notowned', 'Not Owned', 14),
+(24, 'notowned', 'Not Owned', 15),
+(25, 'notowned', 'Not Owned', 16);
 
 -- --------------------------------------------------------
 
@@ -159,6 +161,12 @@ CREATE TABLE `user` (
 --
 
 --
+-- Indexes for table `book`
+--
+ALTER TABLE `book`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `bookmark`
 --
 ALTER TABLE `bookmark`
@@ -183,12 +191,6 @@ ALTER TABLE `user`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `book`
---
-ALTER TABLE `book`
-  ADD PRIMARY KEY (`id`);
-
---
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -196,8 +198,7 @@ ALTER TABLE `book`
 -- AUTO_INCREMENT for table `book`
 --
 ALTER TABLE `book`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT;
-COMMIT;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `bookmark`
@@ -209,7 +210,7 @@ ALTER TABLE `bookmark`
 -- AUTO_INCREMENT for table `tag`
 --
 ALTER TABLE `tag`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT for table `tagname`
