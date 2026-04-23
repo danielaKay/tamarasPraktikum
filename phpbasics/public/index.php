@@ -1,6 +1,7 @@
 <?php
 
     $urlParams = explode("/", $_SERVER['REQUEST_URI']);
+    echo $_SERVER['REQUEST_URI'] . "<br />";
     if(count($urlParams) > 2) $urlController = $urlParams[2];
     if(count($urlParams) > 3) $urlParam = $urlParams[3];
     // if (isset($urlController)) echo "urlController: " . $urlController . "<br />";
@@ -18,7 +19,7 @@
             $apiParams = array();
             foreach($apiParamData as $param) {
                 $paramArray = explode("=", $param);
-                $apiParams[$paramArray[0]] = $paramArray[1];
+                $apiParams[$paramArray[0]] = urldecode($paramArray[1]);
             }
 
             if($apiTarget == "tags" && $apiParams["name"] != "" && $apiParams["book_id"] != "") {

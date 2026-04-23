@@ -85,13 +85,6 @@
                     </div>
                 </div>
 
-                <div class="card-container">
-                    <div class="card-content">
-                        <div class="tag-manager">
-                        <button class="add-tag">Add Tag</button>
-                    </div>
-                </div>
-
                 <div class="item-summary-list">
                     <?php foreach ($books as $book) : ?>
                         
