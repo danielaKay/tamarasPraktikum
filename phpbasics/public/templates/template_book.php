@@ -46,6 +46,39 @@
         echo $sql . "<br>" . $e->getMessage();
     }
 
+    $tagnames = array();
+    try {
+        $sql = "SELECT * FROM tagname";
+        $result = $conn->query($sql);
+        if ($result->rowCount() > 0) {
+            while($row = $result->fetch()) {
+                
+                $tagnames[] = $row;
+            }
+            unset($result);
+        } else {
+            echo "Tags: No records found.";
+        }
+    } catch(PDOException $e) {
+        echo $sql . "<br>" . $e->getMessage();
+    }
+
+    $tags = array();
+    try {
+        $sql = "SELECT * FROM tag WHERE book_id = $bookId";
+        $result = $conn->query($sql);
+        if ($result->rowCount() > 0) {
+            while($row = $result->fetch()) {
+                
+                $tags[] = $row;
+            }
+            unset($result);
+        } else {
+            echo "Bookmark: No records found.";
+        }
+    } catch(PDOException $e) {
+        echo $sql . "<br>" . $e->getMessage();
+    }
     
     $cssGenre= "";
     if (strtolower($book["genre"]) == strtolower("mystery") )
@@ -93,6 +126,7 @@
         <link rel="stylesheet" href="/media/styles/theme_<?= $cssGenre ?>.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <script src="/media/scripts/readingstatus.js"></script>
+        <script src="/media/scripts/tag-manager.js"></script>
 
     </head>
     <body>
@@ -189,14 +223,28 @@
 
                 <div class="card-container">
                     <div class="card-content">
+                        <div class="tag-list">
+                            <?php if(count($tags) > 0) : ?>
+                                <?php foreach ($tags as $tag) : ?>
+
+                                    <?= $tag['display_name'] ?>
+
+                                <?php endforeach ?>
+                            <?php endif ?>
+                        </div>
                         <div class="tag-manager">
                             <select name="taglist" id="taglist" class="taglist">
-                                <option value="unread">unread</option>
-                                <option value="read">read</option>
-                                <option value="finished">finished</option>
+                                <?php if(count($tagnames) > 0) : ?>
+                                    <?php foreach ($tagnames as $tagname) : ?>
+                                        <option value="<?= $tagname['name'] ?>">
+                                            <?= $tagname['display_name'] ?>
+                                        </option>
+                                    <?php endforeach ?>
+                                <?php endif ?>
                             </select>
-                            <br><br>
-                            <input type="submit" value="Submit">
+
+                            <input type="hidden" name="bookid" id="bookid" value="<?= $book["id"] ?>" />
+                            <input class="add-tag" type="submit" value="Add tag">
                         </div>
                     </div>
                 </div>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: database
--- Generation Time: Apr 21, 2026 at 09:45 AM
+-- Generation Time: Apr 23, 2026 at 09:38 AM
 -- Server version: 9.6.0
 -- PHP Version: 8.3.30
 
@@ -29,15 +29,15 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `book` (
   `id` int NOT NULL,
-  `title` varchar(256) DEFAULT '' NOT NULL,
-  `author` varchar(256) DEFAULT '' NOT NULL,
-  `publishing_year` varchar(256) DEFAULT '' NOT NULL,
-  `comment` varchar(256) DEFAULT '' NOT NULL,
-  `user_id` int DEFAULT 0 NOT NULL,
-  `cover_image` varchar(256) DEFAULT '' NOT NULL,
-  `genre` varchar(256) DEFAULT '' NOT NULL,
-  `total_page_number` varchar(4) DEFAULT '' NOT NULL,
-  `read_page_number` varchar(4) DEFAULT '' NOT NULL
+  `title` varchar(256) NOT NULL,
+  `author` varchar(256) NOT NULL,
+  `publishing_year` varchar(256) NOT NULL,
+  `comment` varchar(256) NOT NULL,
+  `user_id` int NOT NULL,
+  `cover_image` varchar(256) NOT NULL,
+  `genre` varchar(256) NOT NULL,
+  `total_page_number` varchar(4) NOT NULL,
+  `read_page_number` varchar(4) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -64,9 +64,9 @@ INSERT INTO `book` (`id`, `title`, `author`, `publishing_year`, `comment`, `user
 
 CREATE TABLE `bookmark` (
   `id` int NOT NULL,
-  `page_number` varchar(4) DEFAULT '' NOT NULL,
-  `comment` varchar(256) DEFAULT '' NOT NULL,
-  `book_id` int DEFAULT 0 NOT NULL
+  `page_number` varchar(4) NOT NULL,
+  `comment` varchar(256) NOT NULL,
+  `book_id` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -83,16 +83,71 @@ INSERT INTO `bookmark` (`id`, `page_number`, `comment`, `book_id`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tag`
+--
+
+CREATE TABLE `tag` (
+  `id` int NOT NULL,
+  `name` varchar(256) NOT NULL,
+  `display_name` varchar(256) NOT NULL,
+  `book_id` int NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `tag`
+--
+
+INSERT INTO `tag` (`id`, `name`, `display_name`, `book_id`) VALUES
+(1, 'read', 'Read', 2),
+(2, 'unread', 'Unread', 3),
+(3, 'unread', 'Unread', 14),
+(4, 'unread', 'Unread', 15),
+(5, 'unread', 'Unread', 16),
+(6, 'unread', 'Unread', 16),
+(7, 'read', 'Read', 14),
+(8, 'read', 'Read', 16),
+(9, 'unread', 'Unread', 1),
+(10, 'notowned', 'Not Owned', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tagname`
+--
+
+CREATE TABLE `tagname` (
+  `id` int NOT NULL,
+  `name` varchar(256) NOT NULL,
+  `display_name` varchar(256) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `tagname`
+--
+
+INSERT INTO `tagname` (`id`, `name`, `display_name`) VALUES
+(1, 'reading', 'Reading'),
+(2, 'unread', 'Unread'),
+(3, 'read', 'Read'),
+(4, 'notowned', 'Not Owned');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `user`
 --
 
 CREATE TABLE `user` (
   `id` int NOT NULL,
-  `username` varchar(256) DEFAULT '' NOT NULL,
-  `firstname` varchar(256) DEFAULT '' NOT NULL,
-  `lastname` varchar(256) DEFAULT '' NOT NULL,
-  `email` varchar(256) DEFAULT '' NOT NULL
+  `username` varchar(256) NOT NULL,
+  `firstname` varchar(256) NOT NULL,
+  `lastname` varchar(256) NOT NULL,
+  `email` varchar(256) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Indexes for dumped tables
+--
 
 --
 -- Indexes for table `bookmark`
@@ -101,9 +156,15 @@ ALTER TABLE `bookmark`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `book`
+-- Indexes for table `tag`
 --
-ALTER TABLE `book`
+ALTER TABLE `tag`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tagname`
+--
+ALTER TABLE `tagname`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -113,22 +174,31 @@ ALTER TABLE `user`
   ADD PRIMARY KEY (`id`);
 
 --
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
 -- AUTO_INCREMENT for table `bookmark`
 --
 ALTER TABLE `bookmark`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `tag`
+--
+ALTER TABLE `tag`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT for table `tagname`
+--
+ALTER TABLE `tagname`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT;
-COMMIT;
-
---
--- AUTO_INCREMENT for table `book`
---
-ALTER TABLE `book`
   MODIFY `id` int NOT NULL AUTO_INCREMENT;
 COMMIT;
 

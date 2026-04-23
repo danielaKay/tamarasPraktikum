@@ -62,6 +62,7 @@
         <link rel="stylesheet" href="/media/styles/theme_overview.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <script src="/media/scripts/readingstatus.js"></script>
+        <script src="/media/scripts/tag-manager.js"></script>
     </head>
     <body>
         <div class="page-container">
@@ -81,6 +82,13 @@
                 <div class="card-container">
                     <div class="card-content">
                         <h1><i class="fa-icon fa-sharp fa-solid fa-book-open-reader"></i>Bücher-Verwaltung: Übersicht</h1>
+                    </div>
+                </div>
+
+                <div class="card-container">
+                    <div class="card-content">
+                        <div class="tag-manager">
+                        <button class="add-tag">Add Tag</button>
                     </div>
                 </div>
 
