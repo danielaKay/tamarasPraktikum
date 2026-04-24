@@ -231,6 +231,7 @@
 
                                         <div class="js-tag-display tag-display">
                                             <a href="/index.php/filterbytag/<?= $tag['name'] ?>">
+                                                <i class="fa-icon fa-sharp fa-solid <?= $tag['icon'] ?>"></i> 
                                                 <span><?= $tag['display_name'] ?></span>
                                             </a>
                                             <span class="js-delete-tag">
@@ -249,7 +250,8 @@
                                     <?php if(count($tagnames) > 0) : ?>
                                         <?php foreach ($tagnames as $tagname) : ?>
                                             <option value="<?= $tagname['name'] ?>">
-                                                <?= $tagname['display_name'] ?>
+                                                 <i class="fa-icon fa-sharp fa-solid fa-trash-can"></i>
+                                                 <?= $tagname['display_name'] ?>
                                             </option>
                                         <?php endforeach ?>
                                     <?php endif ?>

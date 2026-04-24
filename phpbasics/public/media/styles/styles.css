@@ -156,7 +156,14 @@ select.tagselect {
     padding: 5px;
 }
 .tag-display a {
-   color:var(--main-text-color) ; 
+    display: inline-block;
+   background-color:var(--main-text-color) ;
+   color:var(--card-bg-color) ;
+   height: 24px;
+   border-radius: 12px;
+   padding: 2px 5px;
+   
+    
 }
 
 input[type=submit] {
