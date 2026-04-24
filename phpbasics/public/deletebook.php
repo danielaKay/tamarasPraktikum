@@ -27,6 +27,8 @@
         } catch(PDOException $e) {
             echo $sql . "<br>" . $e->getMessage();
         }
+
+        header('Location: /index.php');
 }
 ?>
 <html>

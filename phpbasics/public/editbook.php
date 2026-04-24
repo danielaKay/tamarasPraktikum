@@ -51,6 +51,8 @@
         } catch(PDOException $e) {
             echo $sql . "<br>" . $e->getMessage();
         }
+
+        header('Location: /index.php/book/' . $bookId);
     } 
     
     if (isset($bookId)) {

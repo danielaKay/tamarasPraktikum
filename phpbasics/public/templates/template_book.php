@@ -258,7 +258,6 @@
                                     <?php if(count($tagnames) > 0) : ?>
                                         <?php foreach ($tagnames as $tagname) : ?>
                                             <option value="<?= $tagname['id'] ?>">
-                                                 <i class="fa-icon fa-sharp fa-solid fa-trash-can"></i>
                                                  <?= $tagname['display_name'] ?>
                                             </option>
                                         <?php endforeach ?>

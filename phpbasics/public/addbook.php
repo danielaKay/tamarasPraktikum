@@ -25,14 +25,42 @@
         }
 
         $sql = "INSERT INTO book (" . implode(", ", $sqlColumns) . ", user_id)
-            VALUES ('" . implode("', '", $sqlData) . "', 1)";
+            VALUES ('" . implode("', '", $sqlData) . "', 1);";
 
         try {
             $sql = $sql;
-            $conn->exec($sql);
+            $result = $conn->query($sql);
+            if ($result->rowCount() > 0) {
+                while($row = $result->fetch()) {
+                    // echo "--" . var_dump($row) . "--<br />";
+                }
+                unset($result);
+            } else {
+                echo "Tags: No records found.";
+            }
         } catch(PDOException $e) {
             echo $sql . "<br>" . $e->getMessage();
         }
+
+        $sql = "SELECT LAST_INSERT_ID();";
+        $newId = "";
+        try {
+            $sql = $sql;
+            $result = $conn->query($sql);
+            if ($result->rowCount() > 0) {
+                while($row = $result->fetch()) {
+                    
+                    $newId = $row[0];
+                }
+                unset($result);
+            } else {
+                echo "Tags: No records found.";
+            }
+        } catch(PDOException $e) {
+            echo $sql . "<br>" . $e->getMessage();
+        }
+
+        header('Location: /index.php/book/' . $newId);
     }
 ?>
 <html>
@@ -115,6 +143,22 @@
                                 </div>
                                 <div class="value">
                                     <input type="text" id="genre" name="genre">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="key">
+                                    <label for="total_page_number">total page number:</label> 
+                                </div>
+                                <div class="value">
+                                    <input type="text" id="total_page_number" name="total_page_number">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="key">
+                                    <label for="read_page_number">read page number:</label> 
+                                </div>
+                                <div class="value">
+                                    <input type="text" id="read_page_number" name="read_page_number">
                                 </div>
                             </div>
                             <div class="form-row">
