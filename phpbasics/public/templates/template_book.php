@@ -74,7 +74,7 @@
             }
             unset($result);
         } else {
-            echo "Bookmark: No records found.";
+            // echo "Bookmark: No records found.";
         }
     } catch(PDOException $e) {
         echo $sql . "<br>" . $e->getMessage();
