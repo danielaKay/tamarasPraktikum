@@ -22,7 +22,7 @@
                 $apiParams[$paramArray[0]] = urldecode($paramArray[1]);
             }
 
-            if($_SERVER['REQUEST_METHOD'] == "POST" && $apiTarget == "tags" && $apiParams["name"] != "" && $apiParams["book_id"] != "") {
+            if($_SERVER['REQUEST_METHOD'] == "POST" && $apiTarget == "tags" && $apiParams["id"] != "" && $apiParams["book_id"] != "") {
                 $servername = "database";
                 $username = "tamara";
                 $password = "daniela";
@@ -35,8 +35,8 @@
                     die("Could not connect. " . $e->getMessage());
                 }
 
-                $sql = "INSERT INTO tag (`name`, `display_name`, `book_id`)
-                    VALUES ('" . $apiParams["name"] . "', '" . $apiParams["display_name"] . "', " . $apiParams["book_id"] . ");";
+                $sql = "INSERT INTO tag (`book_id`, `tagname_id`)
+                    VALUES (" . $apiParams["book_id"] . ", " . $apiParams["id"] . ");";
 
                 try {
                     $sql = $sql;

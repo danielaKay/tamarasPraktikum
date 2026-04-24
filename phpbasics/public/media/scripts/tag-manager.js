@@ -12,7 +12,7 @@ $(document).ready(function() {
 
         var bookId = $(parentElement).find("[type='hidden'][name='bookid']").val();
 
-        $.post( "/index.php/api/tags?name=" + encodeURIComponent(selectValue) + "&display_name=" + encodeURIComponent(selectText) +"&book_id=" + encodeURIComponent(bookId), function( data ) {
+        $.post( "/index.php/api/tags?id=" + encodeURIComponent(selectValue) + "&book_id=" + encodeURIComponent(bookId), function( data ) {
         }).done(function() {
             alert( "tag was added successfully" );
             location.reload();
