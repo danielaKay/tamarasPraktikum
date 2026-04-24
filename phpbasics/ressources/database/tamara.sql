@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: database
--- Generation Time: Apr 23, 2026 at 01:03 PM
+-- Generation Time: Apr 24, 2026 at 07:56 AM
 -- Server version: 9.6.0
 -- PHP Version: 8.3.30
 
@@ -94,8 +94,7 @@ INSERT INTO `bookmark` (`id`, `page_number`, `comment`, `book_id`) VALUES
 
 CREATE TABLE `tag` (
   `id` int NOT NULL,
-  `name` varchar(256) NOT NULL,
-  `display_name` varchar(256) NOT NULL,
+  `tagname_id` int NOT NULL,
   `book_id` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -103,22 +102,22 @@ CREATE TABLE `tag` (
 -- Dumping data for table `tag`
 --
 
-INSERT INTO `tag` (`id`, `name`, `display_name`, `book_id`) VALUES
-(12, 'reading', 'Reading', 2),
-(13, 'reading', 'Reading', 3),
-(14, 'unread', 'Unread', 5),
-(15, 'reading', 'Reading', 6),
-(16, 'unread', 'Unread', 7),
-(17, 'unread', 'Unread', 8),
-(18, 'notowned', 'Not Owned', 9),
-(19, 'notowned', 'Not Owned', 10),
-(20, 'notowned', 'Not Owned', 11),
-(21, 'notowned', 'Not Owned', 12),
-(22, 'notowned', 'Not Owned', 13),
-(23, 'notowned', 'Not Owned', 14),
-(24, 'notowned', 'Not Owned', 15),
-(25, 'notowned', 'Not Owned', 16),
-(33, 'reading', 'Reading', 1);
+INSERT INTO `tag` (`id`, `tagname_id`, `book_id`) VALUES
+(12, 1, 2),
+(13, 1, 3),
+(14, 2, 5),
+(15, 1, 6),
+(16, 2, 7),
+(17, 2, 8),
+(18, 4, 9),
+(19, 4, 10),
+(20, 4, 11),
+(21, 4, 12),
+(22, 4, 13),
+(23, 4, 14),
+(24, 4, 15),
+(25, 4, 16),
+(33, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -130,14 +129,14 @@ CREATE TABLE `tagname` (
   `id` int NOT NULL,
   `name` varchar(256) NOT NULL,
   `display_name` varchar(256) NOT NULL,
-  `icons` varchar(256) NOT NULL
+  `icon` varchar(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `tagname`
 --
 
-INSERT INTO `tagname` (`id`, `name`, `display_name`, `icons`) VALUES
+INSERT INTO `tagname` (`id`, `name`, `display_name`, `icon`) VALUES
 (1, 'reading', 'Reading', 'fa-book-open'),
 (2, 'unread', 'Unread', 'fa-book'),
 (3, 'read', 'Read', 'fa-book-bookmark'),

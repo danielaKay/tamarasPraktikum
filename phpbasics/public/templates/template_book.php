@@ -65,7 +65,7 @@
 
     $tags = array();
     try {
-        $sql = "SELECT * FROM tag WHERE book_id = $bookId";
+        $sql = "SELECT tag.id, tag.book_id, tagname.name, tagname.display_name, tagname.icon FROM tag INNER JOIN tagname ON tag.tagname_id=tagname.id WHERE tag.book_id = $bookId";
         $result = $conn->query($sql);
         if ($result->rowCount() > 0) {
             while($row = $result->fetch()) {
