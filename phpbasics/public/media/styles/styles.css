@@ -162,6 +162,7 @@ select.tagselect {
    height: 24px;
    border-radius: 12px;
    padding: 2px 5px;
+   border: 1px solid var(--bg-color);
    
     
 }
