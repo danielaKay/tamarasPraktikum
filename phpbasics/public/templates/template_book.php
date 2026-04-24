@@ -231,12 +231,12 @@
 
                                         <div class="js-tag-display tag-display">
                                             <a href="/index.php/filterbytag/<?= $tag['name'] ?>">
-                                                <i class="fa-icon fa-sharp fa-solid <?= $tag['icon'] ?>"></i> 
-                                                <span><?= $tag['display_name'] ?></span>
+                                                <i class="fa-icon fa-sharp fa-solid <?= $tag['icon'] ?>"></i>
+                                                <div><?= $tag['display_name'] ?></div>
                                             </a>
-                                            <span class="js-delete-tag">
+                                            <div class="js-delete-tag delete-tag">
                                                 <i class="fa-icon fa-sharp fa-solid fa-trash-can"></i>
-                                            </span>
+                                            </div>
                                             <input type="hidden" name="tagid" id="tagid" value="<?= $tag["id"] ?>" />
                                         </div>
 

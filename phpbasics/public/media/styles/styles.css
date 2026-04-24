@@ -153,18 +153,43 @@ select.tagselect {
 }
 
 .tag-display {
-    padding: 5px;
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
 }
 .tag-display a {
-    display: inline-block;
-   background-color:var(--main-text-color) ;
-   color:var(--card-bg-color) ;
-   height: 24px;
-   border-radius: 12px;
-   padding: 2px 5px;
-   border: 1px solid var(--bg-color);
-   
-    
+    display: flex;
+    flex-direction: row;
+    background-color: var(--main-text-color);
+    border: 2px solid var(--bg-color);
+    color:var(--card-bg-color);
+    font-size: 16px;
+    height: 24px;
+    border-radius: 12px;
+    text-decoration: none;
+    margin-right: 5px;
+}
+.tag-display a:hover {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 
+        0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.tag-display a i {
+    height: 16px;
+    margin: 4px 1px 4px 5px;
+}
+.tag-display a div {
+    margin: 5px 5px 3px 1px;
+}
+
+.tag-display .delete-tag i {
+    margin-top: 3px;
+    font-size: 20px;
+}
+
+.tag-display .delete-tag i:hover {
+    color: var(--bg-color);
+    cursor: pointer;
 }
 
 input[type=submit] {
