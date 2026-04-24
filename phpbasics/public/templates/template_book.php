@@ -29,6 +29,10 @@
         echo $sql . "<br>" . $e->getMessage();
     }
 
+    if (empty($book)) {
+        header('Location: /index.php');
+    }
+
     $bookmarks = array();
     try {
         $sql = "SELECT * FROM bookmark WHERE book_id = $bookId";
