@@ -40,7 +40,7 @@
             }
             unset($result);
         } else {
-            echo "Bookmark: No records found.";
+            // echo "Bookmark: No records found.";
         }
     } catch(PDOException $e) {
         echo $sql . "<br>" . $e->getMessage();
@@ -65,7 +65,7 @@
 
     $tags = array();
     try {
-        $sql = "SELECT tag.id, tag.book_id, tagname.name, tagname.display_name, tagname.icon FROM tag INNER JOIN tagname ON tag.tagname_id=tagname.id WHERE tag.book_id = $bookId";
+        $sql = "SELECT tag.id, tag.book_id, tag.tagname_id, tagname.name, tagname.display_name, tagname.icon FROM tag INNER JOIN tagname ON tag.tagname_id=tagname.id WHERE tag.book_id = $bookId";
         $result = $conn->query($sql);
         if ($result->rowCount() > 0) {
             while($row = $result->fetch()) {
@@ -201,10 +201,18 @@
                                     <tr>
                                         <th>bookmarks:</th>
                                         <td>
-                                            <?php foreach ($bookmarks as $bookmark) : ?>
-                                                Page: <?= $bookmark["page_number"] ?> =
-                                                "<?= $bookmark["comment"] ?>" <br />
-                                            <?php endforeach ?>
+                                            <div class="bookmarks">
+                                                <?php foreach ($bookmarks as $bookmark) : ?>
+                                                    <div class="bookmark">
+                                                        <div class="bookmark-pages">
+                                                            Page <?= $bookmark["page_number"] ?>:
+                                                        </div>
+                                                        <div class="bookmark-comment">
+                                                            "<?= $bookmark["comment"] ?>"
+                                                        </div>
+                                                    </div>
+                                                <?php endforeach ?>
+                                            </div>
                                         </td>
                                     </tr>
                                 <?php endif ?>
@@ -230,7 +238,7 @@
                                     <?php foreach ($tags as $tag) : ?>
 
                                         <div class="js-tag-display tag-display">
-                                            <a href="/index.php/filterbytag/<?= $tag['name'] ?>">
+                                            <a href="/index.php/filterbytag/<?= $tag['tagname_id'] ?>">
                                                 <i class="fa-icon fa-sharp fa-solid <?= $tag['icon'] ?>"></i>
                                                 <div><?= $tag['display_name'] ?></div>
                                             </a>

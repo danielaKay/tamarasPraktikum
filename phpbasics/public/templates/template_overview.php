@@ -23,7 +23,7 @@
     if(isset($urlController) && $urlController == "filterbytag") {
         $bookids = array();
         try {
-            $sql = "SELECT book_id FROM tag WHERE name = '$urlParam';";
+            $sql = "SELECT book_id FROM tag WHERE tagname_id = '$urlParam';";
             $result = $conn->query($sql);
             if ($result->rowCount() > 0) {
                 while($row = $result->fetch()) {
@@ -37,6 +37,22 @@
         } catch(PDOException $e) {
             echo $sql . "<br>" . $e->getMessage();
         }
+        $tagname = "";
+        try {
+            $sql = "SELECT display_name FROM tagname WHERE id = '$urlParam';";
+            $result = $conn->query($sql);
+            if ($result->rowCount() > 0) {
+                while($row = $result->fetch()) {
+                    $tagname = $row[0];
+                }
+                unset($result);
+            } else {
+                echo "No records found.";
+            }
+        } catch(PDOException $e) {
+            echo $sql . "<br>" . $e->getMessage();
+        }
+
         $sql = "SELECT * FROM book WHERE id IN ( " . implode(", ", $bookids) . ");";
 
     } else {
@@ -115,7 +131,7 @@
                     <div class="card-content">
                         <h1><i class="fa-icon fa-sharp fa-solid fa-book-open-reader"></i>Bücher-Verwaltung: Übersicht</h1>
                         <?php if(isset($urlController) && $urlController == "filterbytag") : ?>
-                            <h2>Filtered by tag "<?= $urlParam ?>"</h2>
+                            <h2>Filtered by tag "<?= $tagname ?>"</h2>
                         <?php endif ?>
                     </div>
                 </div>
